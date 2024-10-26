@@ -1,0 +1,54 @@
+/* Override the default font family variables */
+:root {
+    --r-heading-font: Roboto, "Source Sans Pro", Helvetica;
+    --r-main-font: Roboto, "Source Sans Pro", Helvetica;
+    -- --r-block-margin: 0;
+}
+
+/* Ensure the overall slides container is top-aligned */
+h2 {
+    position: fixed !important;
+    top: 0 !important; /* Ensure no unwanted margin is added on top */
+    color: #0063a6 !important;
+}
+
+.custom-title-div {
+}
+
+#sec-title-slide {
+    display: flex !important;
+    height: 100%;                     
+}
+.csl-entry {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+    text-align: left;
+    
+}
+
+.figure-number {
+    font-weight:bold;
+}
+
+.org-p-fig {
+    display: flex;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+}
+
+img {
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+
+}

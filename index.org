@@ -1,0 +1,184 @@
+:PROPERTIES:
+:ID:       dae7ee8b-4424-404a-be4c-df415e5abab7
+:END:
+#+title: Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems
+#+project: presentation JOptim 2024
+#+created: [2024-09-26 Thu]
+#+last_modified: [2024-09-26 Thu 21:21]
+#+author: D. Pegler, D. Steyrl, F. Scharnowski, & F. Melinscak
+#+date: 2024-09-16
+# +REVEAL_TITLE_SLIDE_BACKGROUND: "https://example.com/background.jpg"
+# +REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/a
+# +REVEAL_VERSION: 3.6.0
+#+REVEAL_THEME: white
+#+REVEAL_TRANS: none
+#+REVEAL_TITLE_SLIDE:<div style="display:flex;flex-direction:column;justify-content:center;height:100%%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>%t</h3><p style="margin-top:4rem;">%a</p></div></div>
+#+REVEAL_MARGIN: 0.1
+# +reveal_slide_footer: <div>Footer</div>
+#+reveal_single_file: t
+#+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number:t
+#+OPTIONS: reveal_width:1200 reveal_height:800 reveal_center:t
+#+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
+#+cite_export: csl apa.csl
+# #+REVEAL_HTML_HEAD: <style> /* Import custom fonts as needed */ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); body {font-family: 'Roboto', sans-serif;} h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif; font-weight: 700; /* Use bold for headings */} p {font-family: 'Roboto', sans-serif; font-weight: 400;} </style>
+#+REVEAL_EXTRA_CSS: css/custom.css
+#+REVEAL_EXTRA_OPTIONS: display: 'flex'
+#+REVEAL_EXTERNAL_PLUGINS: ((diagram . "{src: \"%splugin/diagram/revealjs-diagram.js\", condition: function() { return !!document.querySelector('[data-diagram]'); }}"))
+
+# some more info:
+# - https://github.com/emacsmirror/org-re-reveal
+# - https://revealjs.com/config/
+# - https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
+# - https://ertwro.github.io/githubppt/Readmeofficial.html
+
+# on how to create reusable css classes
+# - https://www.gibiris.org/eo-blog/posts/2022/09/28_org-reveal-and-gridded-layouts.html
+
+# TODO: check how to insert image licenses using templates
+# TODO: how to create simple diagrams with diagram+d3js plugins
+# TODO: split bibliography if it gets too long
+# TODO: find simpler way to create (css classes?) to particular slide layouts
+# TODO: use an alternative to "position: fixed" to make PDF export work
+
+* Problem Setting
+
+#+begin_notes
+Today, I am going to present you a new study on the topic of human-machine colaboration.
+#+end_notes
+
+#+REVEAL_HTML: <div style="float: left; width: 80%">
+*Machine Problem-Solving*
+#+ATTR_REVEAL: :frag (t)
+  - Increasingly taking over human domains
+  - AI getting more complex \to black boxes \to lack of trust
+  - Trust issues not new (Classical AI in 1950s) 
+#+ATTR_REVEAL: :frag (t)
+*Evaluating Human Interpretability*
+#+ATTR_REVEAL: :frag (t)
+  - Human-in-the-loop approach to evaluate interpretability
+  - Understanding how a machine makes a decision
+  - Critical for trust and collaboration with machines
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="float: right; width: 20%">
+
+#+HTML_ATTR: :width 100px
+#+caption: George Dantzig, father of linear programming (Source: [[https://malevus.com/george-dantzig][malevus.com]]).
+ file:./img/dantzig.jpg
+
+ #+REVEAL_HTML: </div>
+* Combinatorial Design Problems
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
+#+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
+#+ATTR_HTML: :height 180px
+#+caption: Knapsack Problem (source: [[https://commons.wikimedia.org/wiki/File:Knapsack.svg][wikimedia commons]]).
+file:./svg/knapsack.svg
+#+ATTR_HTML: :height 180px
+#+caption: Traveling Salesman Problem (source: [[https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg][wikimedia commons]]).
+file:./svg/traveling_salesman.svg
+#+ATTR_HTML: :height 180px
+#+caption: Minimum Spanning Tree Problem (source: [[https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg][wikimedia commons]]).
+file:./svg/minimum_spanning_tree.svg
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-height:60%">
+#+ATTR_REVEAL: :frag (t)
+  - Many real-world scenarios (logistics, etc.)
+  - Can be solved by machines optimally (e.g., with Linear Programming)
+  - Can be solved by humans (if problem is small enough)
+#+ATTR_REVEAL: :frag (t)
+  \to **Good setting for human-machine collaboration**
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+* Bin-Packing Problem
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
+#+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
+- Abstract representation of real-world scenarios (e.g., scheduling)
+- Pack items into boxes
+- Goal: Fill the boxes as much as possible
+- Constraint: You cannot overfill the boxes
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-width:30%">
+#+caption: A human performing the bin packing task.
+ file:./img/binpacking.gif
+ #+REVEAL_HTML: </div>
+ #+REVEAL_HTML: </div>
+
+* Optimal Solutions
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
+
+#+ATTR_HTML: :height 600px :margin-top 0px :margin-bottom 0px
+#+caption: The machine ([[https://developers.google.com/optimization/cp/cp_solver][CP-SAT]]) providing possible optimal solutions.
+ file:./img/optimalsolutions.gif
+#+REVEAL_HTML: </div>
+
+# this variable defines how the figure is exported to html: oer-reveal--figure-div-template. It includes bare <p> tags which does not allow for further customization using css, so we will add a class to it to make this possible through custom.css.
+
+* Research Question
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
+
+*"What makes a solution interpretable?"*
+
+#+REVEAL_HTML: </div>
+
+* H1: Heuristic
+- Humans use heuristics to solve these problems, i.e., a greedy heuristic
+- ...
+- *\to Solutions more interpretable the more similar they are to the greedy solution*
+  
+* H2: Simplicity
+- ...
+- ...
+- *\to Solutions more interpretable the simpler they are*
+  
+* H3: Visual Representation
+- Focus on order
+- Items and boxes can be sorted by size or at random
+- *\to Solutions more interpretable if they sorted*
+  
+* Online Experiment
+
+#+REVEAL_HTML:<section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
+  
+* Online Experiment 
+* Results
+* Limitations
+* Takeaways
+* Source code :noexport:
+#+begin_src python -n :results output
+import numpy as np
+
+np.random.seed(12)
+x = np.random.randint(100)
+print(x)
+#+end_src
+
+#+RESULTS:
+: 75
+
+* Equations :noexport:
+  - Here is an inline equation: \( E = mc^2 \).
+  - Here is a displayed equation:
+    \[
+    a^2 + b^2 = c^2
+    \]
+* Example References :noexport:
+
+- [cite:@ottSimplifExSimplifyingExplaining2023]
+- [cite:@lageHumanintheloopInterpretabilityPrior2018]
+- [cite:@wynnLearningHumanlikeRepresentations2023]
+- [cite:@murawskiHowHumansSolve2016]
+- [cite:@francoTaskindependentMetricsComputational2022]
+- [cite:@dumnicPathGameCrowdsourcingTimeconstrained2019]
+- [cite:@macgregorHumanPerformanceTraveling2011]
+
+* References
+   :PROPERTIES:
+   :CUSTOM_ID: bibliography
+   :END:
+
+# adjust font-size and line-width and in css/custom.css if you cannot put all references on 1 slide. a better solution that allows splitting the bibliography across slides still needs to be found. 
+
+# note: this uses apa.csl which is downloaded from the zotero style repository and makes sure that the bibliography is formatted correctly. https://www.zotero.org/styles
+
+#+print_bibliography:

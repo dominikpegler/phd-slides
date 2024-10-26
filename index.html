@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems</title>
+<meta name="author" content="D. Pegler, D. Steyrl, F. Scharnowski, & F. Melinscak"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/dist/theme/white.css" id="theme"/>
+
+<link rel="stylesheet" href="css/custom.css"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<div style="display:flex;flex-direction:column;justify-content:center;height:100%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems</h3><p style="margin-top:4rem;">D. Pegler, D. Steyrl, F. Scharnowski, &amp; F. Melinscak</p></div></div>
+</section>
+<section>
+<section id="slide-orge5376be">
+<h2 id="orge5376be">Problem Setting</h2>
+<aside class="notes">
+<p>
+Today, I am going to present you a new study on the topic of human-machine colaboration.
+</p>
+
+</aside>
+
+<div style="float: left; width: 80%">
+<p>
+<b>Machine Problem-Solving</b>
+</p>
+<ul>
+<li class="fragment">Increasingly taking over human domains</li>
+<li class="fragment">AI getting more complex &rarr; black boxes &rarr; lack of trust</li>
+<li class="fragment">Trust issues not new (Classical AI in 1950s)</li>
+
+</ul>
+<p class="fragment (t)">
+<b>Evaluating Human Interpretability</b>
+</p>
+<ul>
+<li class="fragment">Human-in-the-loop approach to evaluate interpretability</li>
+<li class="fragment">Understanding how a machine makes a decision</li>
+<li class="fragment">Critical for trust and collaboration with machines</li>
+
+</ul>
+</div>
+<div style="float: right; width: 20%">
+
+
+<div id="orgda81b12" class="figure">
+<p class="org-p-fig"><img src="./img/dantzig.jpg" alt="dantzig.jpg" />
+</p>
+<p class="org-p-figcaption"><span class="figure-number">Figure 1: </span>George Dantzig, father of linear programming (Source: <a href="https://malevus.com/george-dantzig">malevus.com</a>).</p>
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org4fc5364">
+<h2 id="org4fc5364">Combinatorial Design Problems</h2>
+<div style="display:flex;flex-direction:column;height: 100%">
+<div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
+
+<div id="org6f7dd40" class="figure">
+<p class="org-p-fig"><img src="./svg/knapsack.svg" alt="knapsack.svg" class="org-svg" height="180px" />
+</p>
+<p class="org-p-figcaption"><span class="figure-number">Figure 2: </span>Knapsack Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Knapsack.svg">wikimedia commons</a>).</p>
+</div>
+
+<div id="orgef1aba1" class="figure">
+<p class="org-p-fig"><img src="./svg/traveling_salesman.svg" alt="traveling_salesman.svg" class="org-svg" height="180px" />
+</p>
+<p class="org-p-figcaption"><span class="figure-number">Figure 3: </span>Traveling Salesman Problem (source: <a href="https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg">wikimedia commons</a>).</p>
+</div>
+
+<div id="org2718ddf" class="figure">
+<p class="org-p-fig"><img src="./svg/minimum_spanning_tree.svg" alt="minimum_spanning_tree.svg" class="org-svg" height="180px" />
+</p>
+<p class="org-p-figcaption"><span class="figure-number">Figure 4: </span>Minimum Spanning Tree Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg">wikimedia commons</a>).</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;max-height:60%">
+<ul>
+<li class="fragment">Many real-world scenarios (logistics, etc.)</li>
+<li class="fragment">Can be solved by machines optimally (e.g., with Linear Programming)</li>
+<li class="fragment">Can be solved by humans (if problem is small enough)</li>
+
+</ul>
+<p class="fragment (t)">
+&rarr; <b><b>Good setting for human-machine collaboration</b></b>
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgf6e7389">
+<h2 id="orgf6e7389">Bin-Packing Problem</h2>
+<div style="display:flex;flex-direction:row;width: 100%">
+<div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
+<ul>
+<li>Abstract representation of real-world scenarios (e.g., scheduling)</li>
+<li>Pack items into boxes</li>
+<li>Goal: Fill the boxes as much as possible</li>
+<li>Constraint: You cannot overfill the boxes</li>
+
+</ul>
+</div>
+<div style="display:flex;flex-direction:column;max-width:30%">
+
+<div id="org79ebda7" class="figure">
+<p class="org-p-fig"><img src="./img/binpacking.gif" alt="binpacking.gif" />
+</p>
+<p class="org-p-figcaption"><span class="figure-number">Figure 5: </span>A human performing the bin packing task.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org0d89fb8">
+<h2 id="org0d89fb8">Optimal Solutions</h2>
+<div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
+
+
+<div id="orgc0ea423" class="figure">
+<p class="org-p-fig"><img src="./img/optimalsolutions.gif" alt="optimalsolutions.gif" height="600px" margin-top="0px" margin-bottom="0px" />
+</p>
+<p class="org-p-figcaption"><span class="figure-number">Figure 6: </span>The machine (<a href="https://developers.google.com/optimization/cp/cp_solver">CP-SAT</a>) providing possible optimal solutions.</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc42101e">
+<h2 id="orgc42101e">Research Question</h2>
+<div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
+
+<p>
+<b>"What makes a solution interpretable?"</b>
+</p>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc184755">
+<h2 id="orgc184755">H1: Heuristic</h2>
+<ul>
+<li>Humans use heuristics to solve these problems, i.e., a greedy heuristic</li>
+<li>&#x2026;</li>
+<li><b>&rarr; Solutions more interpretable the more similar they are to the greedy solution</b></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org22c1b53">
+<h2 id="org22c1b53">H2: Simplicity</h2>
+<ul>
+<li>&#x2026;</li>
+<li>&#x2026;</li>
+<li><b>&rarr; Solutions more interpretable the simpler they are</b></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1372947">
+<h2 id="org1372947">H3: Visual Representation</h2>
+<ul>
+<li>Focus on order</li>
+<li>Items and boxes can be sorted by size or at random</li>
+<li><b>&rarr; Solutions more interpretable if they sorted</b></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org67a6c41">
+<h2 id="org67a6c41">Online Experiment</h2>
+<section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
+</section>
+</section>
+<section>
+<section id="slide-orge0f868e">
+<h2 id="orge0f868e">Online Experiment</h2>
+</section>
+</section>
+<section>
+<section id="slide-org57b8f54">
+<h2 id="org57b8f54">Results</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgd4e0165">
+<h2 id="orgd4e0165">Limitations</h2>
+</section>
+</section>
+<section>
+<section id="slide-org8dc3235">
+<h2 id="org8dc3235">Takeaways</h2>
+</section>
+</section>
+<section>
+<section id="slide-bibliography">
+<h2 id="bibliography">References</h2>
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/dist/reveal.js"></script>
+<script src="./reveal.js/plugin/markdown/markdown.js"></script>
+<script src="./reveal.js/plugin/notes/notes.js"></script>
+<script src="./reveal.js/plugin/search/search.js"></script>
+<script src="./reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 't',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.10,
+
+transition: 'none',
+transitionSpeed: 'default',
+display: 'flex',
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+{src: "./reveal.js/plugin/diagram/revealjs-diagram.js", condition: function() { return !!document.querySelector('[data-diagram]'); }}]
+
+});
+</script>
+</body>
+</html>
