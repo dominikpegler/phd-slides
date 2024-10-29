@@ -5,7 +5,6 @@
     -- --r-block-margin: 0;
 }
 
-/* Ensure the overall slides container is top-aligned */
 h2 {
     position: fixed !important;
     top: 0 !important; /* Ensure no unwanted margin is added on top */
@@ -52,3 +51,4 @@ img {
     margin-bottom:0 !important;
 
 }
+

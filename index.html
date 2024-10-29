@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems</title>
-<meta name="author" content="D. Pegler, D. Steyrl, F. Scharnowski, & F. Melinscak"/>
+<title>Machine Learning for Human-Centered Solutions</title>
+<meta name="author" content="Dominik Pegler"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
@@ -17,11 +17,42 @@
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide">
-<div style="display:flex;flex-direction:column;justify-content:center;height:100%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems</h3><p style="margin-top:4rem;">D. Pegler, D. Steyrl, F. Scharnowski, &amp; F. Melinscak</p></div></div>
+<div style="display:flex;flex-direction:column;justify-content:center;height:100%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>Machine Learning for Human-Centered Solutions</h3><h4>Interpretability, Emotion Recognition, and Therapeutic Innovation</h4><p style="margin-top:4rem;">Dominik Pegler</p></div></div>
 </section>
 <section>
-<section id="slide-orge5376be">
-<h2 id="orge5376be">Problem Setting</h2>
+<section id="slide-org603270f">
+<h2 id="org603270f">Overview</h2>
+<ul>
+<li>Machine Learning to enhance human experience in cognitive and affective domain
+<ul>
+<li>Cognitive Domain
+<ul>
+<li>P1: <b>Interpretability of Machine-Generated Solutions</b></li>
+
+</ul></li>
+<li>Affective Domain
+<ul>
+<li>P2: <b>Fear Detection</b></li>
+<li>P3: <b>Optimizing Exposure Therapy</b></li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2d0f2a6">
+<h2 id="org2d0f2a6">Project 1 (P1)</h2>
+<p>
+<b>INTERPRETABILITY OF MACHINE-GENERATED SOLUTIONS TO COMBINATORIAL DESIGN PROBLEMS</b>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgdb88cd7">
+<h2 id="orgdb88cd7">P1 🢒 Problem Setting</h2>
 <aside class="notes">
 <p>
 Today, I am going to present you a new study on the topic of human-machine colaboration.
@@ -52,7 +83,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 <div style="float: right; width: 20%">
 
 
-<div id="orgda81b12" class="figure">
+<div id="org3556df6" class="figure">
 <p class="org-p-fig"><img src="./img/dantzig.jpg" alt="dantzig.jpg" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 1: </span>George Dantzig, father of linear programming (Source: <a href="https://malevus.com/george-dantzig">malevus.com</a>).</p>
@@ -62,24 +93,24 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-org4fc5364">
-<h2 id="org4fc5364">Combinatorial Design Problems</h2>
+<section id="slide-org15b6727">
+<h2 id="org15b6727">P1 🢒 Combinatorial Design Problems</h2>
 <div style="display:flex;flex-direction:column;height: 100%">
 <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 
-<div id="org6f7dd40" class="figure">
+<div id="orgf2105d6" class="figure">
 <p class="org-p-fig"><img src="./svg/knapsack.svg" alt="knapsack.svg" class="org-svg" height="180px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 2: </span>Knapsack Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Knapsack.svg">wikimedia commons</a>).</p>
 </div>
 
-<div id="orgef1aba1" class="figure">
+<div id="orgdc340ef" class="figure">
 <p class="org-p-fig"><img src="./svg/traveling_salesman.svg" alt="traveling_salesman.svg" class="org-svg" height="180px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 3: </span>Traveling Salesman Problem (source: <a href="https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg">wikimedia commons</a>).</p>
 </div>
 
-<div id="org2718ddf" class="figure">
+<div id="org6619c32" class="figure">
 <p class="org-p-fig"><img src="./svg/minimum_spanning_tree.svg" alt="minimum_spanning_tree.svg" class="org-svg" height="180px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 4: </span>Minimum Spanning Tree Problem (source: <a href="https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg">wikimedia commons</a>).</p>
@@ -100,8 +131,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-orgf6e7389">
-<h2 id="orgf6e7389">Bin-Packing Problem</h2>
+<section id="slide-org4fe3189">
+<h2 id="org4fe3189">P1 🢒 Bin-Packing Problem</h2>
 <div style="display:flex;flex-direction:row;width: 100%">
 <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
 <ul>
@@ -114,7 +145,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </div>
 <div style="display:flex;flex-direction:column;max-width:30%">
 
-<div id="org79ebda7" class="figure">
+<div id="org54e57be" class="figure">
 <p class="org-p-fig"><img src="./img/binpacking.gif" alt="binpacking.gif" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 5: </span>A human performing the bin packing task.</p>
@@ -124,12 +155,12 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-org0d89fb8">
-<h2 id="org0d89fb8">Optimal Solutions</h2>
+<section id="slide-org779bd1e">
+<h2 id="org779bd1e">P1 🢒 Optimal Solutions</h2>
 <div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
 
 
-<div id="orgc0ea423" class="figure">
+<div id="orgbf41f8d" class="figure">
 <p class="org-p-fig"><img src="./img/optimalsolutions.gif" alt="optimalsolutions.gif" height="600px" margin-top="0px" margin-bottom="0px" />
 </p>
 <p class="org-p-figcaption"><span class="figure-number">Figure 6: </span>The machine (<a href="https://developers.google.com/optimization/cp/cp_solver">CP-SAT</a>) providing possible optimal solutions.</p>
@@ -138,8 +169,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-orgc42101e">
-<h2 id="orgc42101e">Research Question</h2>
+<section id="slide-org6d52dda">
+<h2 id="org6d52dda">P1 🢒 Research Question</h2>
 <div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
 
 <p>
@@ -150,8 +181,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-orgc184755">
-<h2 id="orgc184755">H1: Heuristic</h2>
+<section id="slide-orgbea8d8f">
+<h2 id="orgbea8d8f">P1 🢒 Heuristic (H1)</h2>
 <ul>
 <li>Humans use heuristics to solve these problems, i.e., a greedy heuristic</li>
 <li>&#x2026;</li>
@@ -161,8 +192,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-org22c1b53">
-<h2 id="org22c1b53">H2: Simplicity</h2>
+<section id="slide-orgc07b80e">
+<h2 id="orgc07b80e">P1 🢒 Simplicity (H2)</h2>
 <ul>
 <li>&#x2026;</li>
 <li>&#x2026;</li>
@@ -172,8 +203,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-org1372947">
-<h2 id="org1372947">H3: Visual Representation</h2>
+<section id="slide-orgc8a0487">
+<h2 id="orgc8a0487">P1 🢒 Visual Representation (H3)</h2>
 <ul>
 <li>Focus on order</li>
 <li>Items and boxes can be sorted by size or at random</li>
@@ -183,35 +214,106 @@ Today, I am going to present you a new study on the topic of human-machine colab
 </section>
 </section>
 <section>
-<section id="slide-org67a6c41">
-<h2 id="org67a6c41">Online Experiment</h2>
+<section id="slide-orge903f34">
+<h2 id="orge903f34">P1 🢒 Online Experiment</h2>
 <section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
 </section>
 </section>
 <section>
-<section id="slide-orge0f868e">
-<h2 id="orge0f868e">Online Experiment</h2>
+<section id="slide-orgf755941">
+<h2 id="orgf755941">P1 🢒 Online Experiment</h2>
 </section>
 </section>
 <section>
-<section id="slide-org57b8f54">
-<h2 id="org57b8f54">Results</h2>
+<section id="slide-orge296bef">
+<h2 id="orge296bef">P1 🢒 Results</h2>
 </section>
 </section>
 <section>
-<section id="slide-orgd4e0165">
-<h2 id="orgd4e0165">Limitations</h2>
+<section id="slide-org2305d4d">
+<h2 id="org2305d4d">P1 🢒 Limitations</h2>
 </section>
 </section>
 <section>
-<section id="slide-org8dc3235">
-<h2 id="org8dc3235">Takeaways</h2>
+<section id="slide-orgda0bb41">
+<h2 id="orgda0bb41">P1 🢒 Takeaways</h2>
+</section>
+</section>
+<section>
+<section id="slide-org9c79c56">
+<h2 id="org9c79c56">Project 2 (P2)</h2>
+<p>
+<b>LEARNING AND LOCALIZING FEAR WITH COMPUTER VISION MODELS</b>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgb379c8d">
+<h2 id="orgb379c8d">P2 🢒 Problem Setting</h2>
+<ul>
+<li>Exposure therapy research</li>
+<li>Aim: computer-aided exposure therapy</li>
+<li>Focus on spider phobia</li>
+<li>Stimuli = images
+<ul>
+<li>Information needed, e.g., how much fear they provoke</li>
+<li>we collected for a set of around 300 spider images fear ratings</li>
+
+</ul></li>
+<li>Problem: Number of stimuli limited (300)
+<ul>
+<li>constantly collecting new fear ratings for each new stimulus not
+feasible</li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org3958202">
+<h2 id="org3958202">P2 🢒 Deep Neural Networks</h2>
+<ul>
+<li>Solution: Deep neural networks create larger stimulus sets (<a href="#citeproc_bib_item_1">LeCun et al., 2015</a>)</li>
+<li>Train them on old data (300 images with fear ratings) so that
+they can give you a fear rating for any new image</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2795e38">
+<h2 id="org2795e38">P2 🢒 Additional Use Cases</h2>
+<ul>
+<li>Content Management</li>
+<li>Alignment Research</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org7f28b90">
+<h2 id="org7f28b90">Project 3 (P3)</h2>
+<p>
+<b>LEARNING OPTIMAL EXPOSURE THERAPY PROTOCOLS WITH REINFORCEMENT LEARNING</b>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org51b6a19">
+<h2 id="org51b6a19">P3 🢒 Problem Setting</h2>
+<ul>
+<li>Reinforcement Learning (RL; <a href="#citeproc_bib_item_2">Sutton &#38; Barto, 2018</a>)</li>
+
+</ul>
 </section>
 </section>
 <section>
 <section id="slide-bibliography">
 <h2 id="bibliography">References</h2>
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>LeCun, Y., Bengio, Y., &#38; Hinton, G. (2015). Deep learning. <i>Nature</i>, <i>521</i>(7553, 7553), 436–444. <a href="https://doi.org/10.1038/nature14539">https://doi.org/10.1038/nature14539</a></div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Sutton, R. S., &#38; Barto, A. G. (2018). <i>Reinforcement learning: An introduction, 2nd ed.</i> (p. xxii, 526). The MIT Press.</div>
 </div>
 </section>
 </section>

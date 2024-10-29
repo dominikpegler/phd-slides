@@ -1,18 +1,19 @@
 :PROPERTIES:
 :ID:       dae7ee8b-4424-404a-be4c-df415e5abab7
 :END:
-#+title: Assessing Human Interpretability of Machine-Generated Solutions to Combinatorial Design Problems
-#+project: presentation JOptim 2024
+#+title: Machine Learning for Human-Centered Solutions
+#+subtitle: Interpretability, Emotion Recognition, and Therapeutic Innovation
+#+project: Faculty Open Presentation 2024
 #+created: [2024-09-26 Thu]
 #+last_modified: [2024-09-26 Thu 21:21]
-#+author: D. Pegler, D. Steyrl, F. Scharnowski, & F. Melinscak
+#+author: Dominik Pegler
 #+date: 2024-09-16
 # +REVEAL_TITLE_SLIDE_BACKGROUND: "https://example.com/background.jpg"
 # +REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/a
 # +REVEAL_VERSION: 3.6.0
 #+REVEAL_THEME: white
 #+REVEAL_TRANS: none
-#+REVEAL_TITLE_SLIDE:<div style="display:flex;flex-direction:column;justify-content:center;height:100%%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>%t</h3><p style="margin-top:4rem;">%a</p></div></div>
+#+REVEAL_TITLE_SLIDE:<div style="display:flex;flex-direction:column;justify-content:center;height:100%%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>%t</h3><h4>%s</h4><p style="margin-top:4rem;">%a</p></div></div>
 #+REVEAL_MARGIN: 0.1
 # +reveal_slide_footer: <div>Footer</div>
 #+reveal_single_file: t
@@ -26,6 +27,7 @@
 #+REVEAL_EXTERNAL_PLUGINS: ((diagram . "{src: \"%splugin/diagram/revealjs-diagram.js\", condition: function() { return !!document.querySelector('[data-diagram]'); }}"))
 
 # some more info:
+# - https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
 # - https://github.com/emacsmirror/org-re-reveal
 # - https://revealjs.com/config/
 # - https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
@@ -40,7 +42,18 @@
 # TODO: find simpler way to create (css classes?) to particular slide layouts
 # TODO: use an alternative to "position: fixed" to make PDF export work
 
-* Problem Setting
+* Overview
+- Machine Learning to enhance human experience in cognitive and affective domain
+  - Cognitive Domain
+    - P1: *Interpretability of Machine-Generated Solutions*
+  - Affective Domain
+    - P2: *Fear Detection*
+    - P3: *Optimizing Exposure Therapy*
+* Project 1 (P1)
+
+*INTERPRETABILITY OF MACHINE-GENERATED SOLUTIONS TO COMBINATORIAL DESIGN PROBLEMS*
+
+* P1 🢒 Problem Setting
 
 #+begin_notes
 Today, I am going to present you a new study on the topic of human-machine colaboration.
@@ -65,8 +78,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+caption: George Dantzig, father of linear programming (Source: [[https://malevus.com/george-dantzig][malevus.com]]).
  file:./img/dantzig.jpg
 
- #+REVEAL_HTML: </div>
-* Combinatorial Design Problems
+#+REVEAL_HTML: </div>
+* P1 🢒 Combinatorial Design Problems
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 #+ATTR_HTML: :height 180px
@@ -88,7 +101,7 @@ file:./svg/minimum_spanning_tree.svg
   \to **Good setting for human-machine collaboration**
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
-* Bin-Packing Problem
+* P1 🢒 Bin-Packing Problem
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
@@ -103,7 +116,7 @@ file:./svg/minimum_spanning_tree.svg
  #+REVEAL_HTML: </div>
  #+REVEAL_HTML: </div>
 
-* Optimal Solutions
+* P1 🢒 Optimal Solutions
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
 
@@ -114,36 +127,70 @@ file:./svg/minimum_spanning_tree.svg
 
 # this variable defines how the figure is exported to html: oer-reveal--figure-div-template. It includes bare <p> tags which does not allow for further customization using css, so we will add a class to it to make this possible through custom.css.
 
-* Research Question
+* P1 🢒 Research Question
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
 
 *"What makes a solution interpretable?"*
 
 #+REVEAL_HTML: </div>
 
-* H1: Heuristic
+* P1 🢒 Heuristic (H1)
 - Humans use heuristics to solve these problems, i.e., a greedy heuristic
 - ...
 - *\to Solutions more interpretable the more similar they are to the greedy solution*
   
-* H2: Simplicity
+* P1 🢒 Simplicity (H2)
 - ...
 - ...
 - *\to Solutions more interpretable the simpler they are*
   
-* H3: Visual Representation
+* P1 🢒 Visual Representation (H3)
 - Focus on order
 - Items and boxes can be sorted by size or at random
 - *\to Solutions more interpretable if they sorted*
   
-* Online Experiment
+* P1 🢒 Online Experiment
 
 #+REVEAL_HTML:<section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
   
-* Online Experiment 
-* Results
-* Limitations
-* Takeaways
+* P1 🢒 Online Experiment 
+* P1 🢒 Results
+* P1 🢒 Limitations
+* P1 🢒 Takeaways
+* Project 2 (P2)
+
+  *LEARNING AND LOCALIZING FEAR WITH COMPUTER VISION MODELS*
+* P2 🢒 Problem Setting
+
+- Exposure therapy research
+- Aim: computer-aided exposure therapy
+- Focus on spider phobia
+- Stimuli = images
+  - Information needed, e.g., how much fear they provoke
+  - we collected for a set of around 300 spider images fear ratings
+- Problem: Number of stimuli limited (300)
+  - constantly collecting new fear ratings for each new stimulus not
+    feasible
+* P2 🢒 Deep Neural Networks    
+- Solution: Deep neural networks create larger stimulus sets [cite/p:@lecunDeepLearning2015]
+- Train them on old data (300 images with fear ratings) so that
+  they can give you a fear rating for any new image
+* P2 🢒 Additional Use Cases
+
+- Content Management
+- Alignment Research
+
+# Networks can assess the fear level of new images without that a person has to look at them, e.g., content on the web could be filtered by this, by testing the images for their phobic content, maybe even tailored to a specific person
+
+
+* Project 3 (P3)
+
+*LEARNING OPTIMAL EXPOSURE THERAPY PROTOCOLS WITH REINFORCEMENT LEARNING*
+
+* P3 🢒 Problem Setting
+
+- Reinforcement Learning (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018])
+
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np
@@ -165,7 +212,7 @@ print(x)
 * Example References :noexport:
 
 - [cite:@ottSimplifExSimplifyingExplaining2023]
-- [cite:@lageHumanintheloopInterpretabilityPrior2018]
+- [cite:@lageHumanloopInterpretabilityPrior2018]
 - [cite:@wynnLearningHumanlikeRepresentations2023]
 - [cite:@murawskiHowHumansSolve2016]
 - [cite:@francoTaskindependentMetricsComputational2022]
