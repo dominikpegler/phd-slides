@@ -5,19 +5,11 @@
     -- --r-block-margin: 0;
 }
 
-h2 {
-    position: fixed !important;
-    top: 0 !important; /* Ensure no unwanted margin is added on top */
+/*
+h3 {
     color: #0063a6 !important;
-}
+}*/
 
-.custom-title-div {
-}
-
-#sec-title-slide {
-    display: flex !important;
-    height: 100%;                     
-}
 .csl-entry {
     font-size: 22px !important;
     line-height: 1.2 !important;
@@ -33,7 +25,6 @@ h2 {
     font-size: 1rem !important;
     line-height: 1.2 !important;
     text-align: left;
-    
 }
 
 .figure-number {

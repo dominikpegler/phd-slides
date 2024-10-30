@@ -8,52 +8,45 @@
 #+last_modified: [2024-09-26 Thu 21:21]
 #+author: Dominik Pegler
 #+date: 2024-09-16
-# +REVEAL_TITLE_SLIDE_BACKGROUND: "https://example.com/background.jpg"
-# +REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/a
-# +REVEAL_VERSION: 3.6.0
 #+REVEAL_THEME: white
-#+REVEAL_TRANS: none
-#+REVEAL_TITLE_SLIDE:<div style="display:flex;flex-direction:column;justify-content:center;height:100%%;top=0;"><img class="univie-logo" src="svg/UniWien_CMYK_A4.svg" style="margin:0;width:19vw;position:fixed;top:0;"/><div class="custom-title-div"><h3>%t</h3><h4>%s</h4><p style="margin-top:4rem;">%a</p></div></div>
 #+REVEAL_MARGIN: 0.1
+#+REVEAL_TRANS: slide
+#+REVEAL_SPEED: fast
 # +reveal_slide_footer: <div>Footer</div>
 #+reveal_single_file: t
-#+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number:t
-#+OPTIONS: reveal_width:1200 reveal_height:800 reveal_center:t
+#+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number:t 
+#+OPTIONS: reveal_width:1200 reveal_height:800 reveal_center:t reveal_keyboard:t reveal_overview:t
 #+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
 #+cite_export: csl apa.csl
-# #+REVEAL_HTML_HEAD: <style> /* Import custom fonts as needed */ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); body {font-family: 'Roboto', sans-serif;} h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif; font-weight: 700; /* Use bold for headings */} p {font-family: 'Roboto', sans-serif; font-weight: 400;} </style>
 #+REVEAL_EXTRA_CSS: css/custom.css
-#+REVEAL_EXTRA_OPTIONS: display: 'flex'
-#+REVEAL_EXTERNAL_PLUGINS: ((diagram . "{src: \"%splugin/diagram/revealjs-diagram.js\", condition: function() { return !!document.querySelector('[data-diagram]'); }}"))
+#+REVEAL_TITLE_SLIDE:<div><h1>%t</h1><h3 style="color:#6b6b6b">%s<h3><p style="text-transform:none;color:black;font-weight:normal">%a<p></div>
 
-# some more info:
-# - https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
-# - https://github.com/emacsmirror/org-re-reveal
-# - https://revealjs.com/config/
-# - https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
-# - https://ertwro.github.io/githubppt/Readmeofficial.html
+* reveal.js infos :noexport:
 
-# on how to create reusable css classes
-# - https://www.gibiris.org/eo-blog/posts/2022/09/28_org-reveal-and-gridded-layouts.html
+- https://earvingad.github.io/posts/img/orgreveal/orgreveal.html
+- https://github.com/emacsmirror/org-re-reveal
+- https://revealjs.com/config/
+- https://ertwro.github.io/githubppt/Readmeofficial.html
 
-# TODO: check how to insert image licenses using templates
-# TODO: how to create simple diagrams with diagram+d3js plugins
-# TODO: split bibliography if it gets too long
-# TODO: find simpler way to create (css classes?) to particular slide layouts
-# TODO: use an alternative to "position: fixed" to make PDF export work
+on how to create reusable css classes
+- https://www.gibiris.org/eo-blog/posts/2022/09/28_org-reveal-and-gridded-layouts.html
+
+- TODO: check how to insert image licenses using templates
+- TODO: how to create simple diagrams with diagram+d3js plugins
+- TODO: split bibliography if it gets too long
+- TODO: find simpler way to create (css classes?) to particular slide layouts
 
 * Overview
 - Machine Learning to enhance human experience in cognitive and affective domain
   - Cognitive Domain
-    - P1: *Interpretability of Machine-Generated Solutions*
+    - 1 – *Interpretability of Machine-Generated Solutions*
   - Affective Domain
-    - P2: *Fear Detection*
-    - P3: *Optimizing Exposure Therapy*
-* Project 1 (P1)
-
+    - 2 – *Fear Detection*
+    - 3 – *Optimizing Exposure Therapy*
+* Project 1
 *INTERPRETABILITY OF MACHINE-GENERATED SOLUTIONS TO COMBINATORIAL DESIGN PROBLEMS*
 
-* P1 🢒 Problem Setting
+** Problem Setting
 
 #+begin_notes
 Today, I am going to present you a new study on the topic of human-machine colaboration.
@@ -72,14 +65,13 @@ Today, I am going to present you a new study on the topic of human-machine colab
   - Understanding how a machine makes a decision
   - Critical for trust and collaboration with machines
 #+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div style="float: right; width: 20%">
 
+#+REVEAL_HTML: <div style="float: right; width: 20%">
 #+HTML_ATTR: :width 100px
 #+caption: George Dantzig, father of linear programming (Source: [[https://malevus.com/george-dantzig][malevus.com]]).
  file:./img/dantzig.jpg
-
 #+REVEAL_HTML: </div>
-* P1 🢒 Combinatorial Design Problems
+** Combinatorial Design Problems
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 #+ATTR_HTML: :height 180px
@@ -101,7 +93,7 @@ file:./svg/minimum_spanning_tree.svg
   \to **Good setting for human-machine collaboration**
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
-* P1 🢒 Bin-Packing Problem
+** Bin-Packing Problem
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
@@ -116,51 +108,68 @@ file:./svg/minimum_spanning_tree.svg
  #+REVEAL_HTML: </div>
  #+REVEAL_HTML: </div>
 
-* P1 🢒 Optimal Solutions
-
-#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width:  100%;top: 0;position: fixed;justify-content: flex-end;align-items: center;">
-
+** Optimal Solutions
 #+ATTR_HTML: :height 600px :margin-top 0px :margin-bottom 0px
 #+caption: The machine ([[https://developers.google.com/optimization/cp/cp_solver][CP-SAT]]) providing possible optimal solutions.
  file:./img/optimalsolutions.gif
-#+REVEAL_HTML: </div>
 
-# this variable defines how the figure is exported to html: oer-reveal--figure-div-template. It includes bare <p> tags which does not allow for further customization using css, so we will add a class to it to make this possible through custom.css.
+# this variable defines how the figure is exported to html: oer-reveal--figure-div-template. It includes bare <p> tags which do not allow for further customization using css. we will add a class to it to make this possible.
 
-* P1 🢒 Research Question
-#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%;width: 100%;justify-content: flex-end;align-items: center;">
-
+** Question
 *"What makes a solution interpretable?"*
 
-#+REVEAL_HTML: </div>
-
-* P1 🢒 Heuristic (H1)
+** Hypotheses
+       :PROPERTIES:
+       :REVEAL_EXTRA_ATTR: data-auto-animate
+       :END:
+ *H1: Heuristic*
 - Humans use heuristics to solve these problems, i.e., a greedy heuristic
 - ...
 - *\to Solutions more interpretable the more similar they are to the greedy solution*
   
-* P1 🢒 Simplicity (H2)
+** Hypotheses
+       :PROPERTIES:
+       :REVEAL_EXTRA_ATTR: data-auto-animate
+       :END:
+*H2: Simplicity*
+
 - ...
 - ...
 - *\to Solutions more interpretable the simpler they are*
   
-* P1 🢒 Visual Representation (H3)
+** Hypotheses
+       :PROPERTIES:
+       :REVEAL_EXTRA_ATTR: data-auto-animate
+       :END:
+ *H3: Representation*
+ 
 - Focus on order
 - Items and boxes can be sorted by size or at random
 - *\to Solutions more interpretable if they sorted*
   
-* P1 🢒 Online Experiment
+** Experiment
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
 
-#+REVEAL_HTML:<section> <div class="fig-container" data-fig-id="fig-collision-detection" data-file="diagram.html"></div> </section>
-  
-* P1 🢒 Online Experiment 
-* P1 🢒 Results
-* P1 🢒 Limitations
-* P1 🢒 Takeaways
-* Project 2 (P2)
+
+
+- here an overview
+- of the
+- experiment
+- ...  
+** Experiment 
+       :PROPERTIES:
+       :REVEAL_EXTRA_ATTR: data-auto-animate
+       :END:
+- here a more detailed view of the evaluation trials
+** Results
+** Limitations
+** Takeaways
+* Project 2
 
   *LEARNING AND LOCALIZING FEAR WITH COMPUTER VISION MODELS*
-* P2 🢒 Problem Setting
+** Problem Setting
 
 - Exposure therapy research
 - Aim: computer-aided exposure therapy
@@ -171,11 +180,11 @@ file:./svg/minimum_spanning_tree.svg
 - Problem: Number of stimuli limited (300)
   - constantly collecting new fear ratings for each new stimulus not
     feasible
-* P2 🢒 Deep Neural Networks    
+** Deep Neural Networks    
 - Solution: Deep neural networks create larger stimulus sets [cite/p:@lecunDeepLearning2015]
 - Train them on old data (300 images with fear ratings) so that
   they can give you a fear rating for any new image
-* P2 🢒 Additional Use Cases
+** Additional Use Cases
 
 - Content Management
 - Alignment Research
@@ -183,11 +192,11 @@ file:./svg/minimum_spanning_tree.svg
 # Networks can assess the fear level of new images without that a person has to look at them, e.g., content on the web could be filtered by this, by testing the images for their phobic content, maybe even tailored to a specific person
 
 
-* Project 3 (P3)
+* Project 3
 
 *LEARNING OPTIMAL EXPOSURE THERAPY PROTOCOLS WITH REINFORCEMENT LEARNING*
 
-* P3 🢒 Problem Setting
+** Problem Setting
 
 - Reinforcement Learning (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018])
 
