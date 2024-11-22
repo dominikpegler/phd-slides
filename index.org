@@ -20,6 +20,8 @@
 #+cite_export: csl apa.csl
 #+REVEAL_EXTRA_CSS: css/custom.css
 #+REVEAL_TITLE_SLIDE:<div><h1>%t</h1><h3 style="color:#6b6b6b">%s<h3><p style="text-transform:none;color:black;font-weight:normal">%a<p></div>
+#+MACRO: revealimg (eval (oer-reveal-export-attribution $1 $2 $3 $4 $5 $6))
+#+MACRO: reveallicense (eval (oer-reveal-export-attribution $1 nil $2 $3 $4 $5 $6))
 
 * reveal.js infos :noexport:
 
@@ -31,7 +33,7 @@
 on how to create reusable css classes
 - https://www.gibiris.org/eo-blog/posts/2022/09/28_org-reveal-and-gridded-layouts.html
 
-- TODO: check how to insert image licenses using templates
+- TODO: check how to insert image licenses using templates https://oer.gitlab.io/emacs-reveal-howto/howto.html#/slide-figure-with-meta-data
 - TODO: how to create simple diagrams with diagram+d3js plugins
 - TODO: split bibliography if it gets too long
 - TODO: find simpler way to create (css classes?) to particular slide layouts
@@ -43,8 +45,12 @@ on how to create reusable css classes
   - Affective Domain
     - 2 – *Fear Detection*
     - 3 – *Optimizing Exposure Therapy*
-* Project 1
+* #1
+
 *INTERPRETABILITY OF MACHINE-GENERATED SOLUTIONS TO COMBINATORIAL DESIGN PROBLEMS*
+
+#+ATTR_HTML: :height 600px
+file:./img/p1.png
 
 ** Problem Setting
 
@@ -66,23 +72,25 @@ Today, I am going to present you a new study on the topic of human-machine colab
   - Critical for trust and collaboration with machines
 #+REVEAL_HTML: </div>
 
-#+REVEAL_HTML: <div style="float: right; width: 20%">
-#+HTML_ATTR: :width 100px
-#+caption: George Dantzig, father of linear programming (Source: [[https://malevus.com/george-dantzig][malevus.com]]).
- file:./img/dantzig.jpg
-#+REVEAL_HTML: </div>
+# +REVEAL_HTML: <div style="float: right; width: 20%">
+
+{{{revealimg("./img/dantzig.jpg.meta", "George Dantzig \(1914-2005\)\, father of linear programming", "30rh")}}}
+
+
+{{{revealimg("./svg/human_loop.svg.meta", "Human-in-the-loop: Enhanced algorithms through continuous human input.", "25rh")}}}
+
+# +REVEAL_HTML: </div>
 ** Combinatorial Design Problems
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
-#+ATTR_HTML: :height 180px
-#+caption: Knapsack Problem (source: [[https://commons.wikimedia.org/wiki/File:Knapsack.svg][wikimedia commons]]).
-file:./svg/knapsack.svg
-#+ATTR_HTML: :height 180px
-#+caption: Traveling Salesman Problem (source: [[https://commons.wikimedia.org/wiki/File:GLPK_solution_of_a_travelling_salesman_problem.svg][wikimedia commons]]).
-file:./svg/traveling_salesman.svg
-#+ATTR_HTML: :height 180px
-#+caption: Minimum Spanning Tree Problem (source: [[https://commons.wikimedia.org/wiki/File:Minimum_spanning_tree.svg][wikimedia commons]]).
-file:./svg/minimum_spanning_tree.svg
+
+{{{revealimg("./svg/knapsack.svg.meta","Knapsack Problem","22rh")}}}
+
+{{{revealimg("./svg/minimum_spanning_tree.svg.meta","Minimum Spanning Tree","22rh")}}}
+
+{{{revealimg("./svg/traveling_salesman.svg.meta","Traveling Salesman Problem","22rh")}}}
+
+
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-height:60%">
 #+ATTR_REVEAL: :frag (t)
@@ -118,72 +126,161 @@ file:./svg/minimum_spanning_tree.svg
 ** Question
 *"What makes a solution interpretable?"*
 
-** Hypotheses
-       :PROPERTIES:
-       :REVEAL_EXTRA_ATTR: data-auto-animate
-       :END:
- *H1: Heuristic*
-- Humans use heuristics to solve these problems, i.e., a greedy heuristic
-- ...
-- *\to Solutions more interpretable the more similar they are to the greedy solution*
+** H1: Heuristic
+- Humans use (greedy) heuristics to solve these problems
+- Similarity to greedy solution is measured by graph edit distance[cite/p:@sanfeliuDistanceMeasureAttributed1983] 
   
-** Hypotheses
-       :PROPERTIES:
-       :REVEAL_EXTRA_ATTR: data-auto-animate
-       :END:
-*H2: Simplicity*
+#+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
+ file:./svg/heuristic.svg
+
+*\to Solutions more interpretable if similar to the greedy solution*
+  
+** H2: Simplicity
+
+- Bins can look more or less simple/complex
+- Formalized as log-probability that a mixture model (2 dirichlet, 1 geometric distribution) returns for each bin composition
+
+#+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
+ file:./svg/composition.svg
+
+*\to Solutions more interpretable if simple*
+
+** H3: Representation
+ 
+- Items and boxes can be sorted by size or at random
+- Formalized as rank correlation between the actual order and the sorted order
+
+#+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
+ file:./svg/order.svg
+
+*\to Solutions more interpretable if sorted*
+  
+** Online-Experiment
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+#+REVEAL_HTML: <img src="svg/experiment_1.svg" alt="experiment overview"/>
+/N/ = 73 participants
+
+** Online-Experiment
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+#+REVEAL_HTML: <img src="svg/experiment_2.svg" alt="experiment overview"/>
+/N/ = 73 participants
+
+** Results Multilevel Analysis
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
+#+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:65%;">
+
+#+ATTR_HTML: :height 100% :margin-top 0px :margin-bottom 0px
+#+caption:Fixed Effects Estimates of Predictor Variables on Choice in Multilevel Analysis. The plot displays the estimated fixed effects (with 95% confidence intervals) for the three predictors. The effects are adjusted for random effects at the group level, highlighting the marginal impact of each predictor on the outcome variable 'choice'.
+ file:./img/results_choice_fixed_effects.png
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:35%;">
+- *All three* predictors relevant for people's choices
+- *Order* and *Heuristic* most influental
+
+#+REVEAL_HTML: <div style="font-size:1.5rem;">
+Other findings:
+  - Considerable participant variability in all predictors
+  - Self-reported problem-solving skills ("PSI") and solving performance do not moderate choice
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+
+** Results Machine Learning Analysis
+
+** Results Eye-tracking Analysis
 
 - ...
 - ...
-- *\to Solutions more interpretable the simpler they are*
+- ...
+
+** Limitations
+- Did we measure *interpretability*?
+- Focus on *small problems* (diversity of solutions limited)
+- Only tested for optimal solutions, *no suboptimal solutions*
+
+*Possible next steps*
+
+- Collaboration task
+- One cognitive model instead of three
+- Eye-tracking analysis
+
+** Takeaways
+- Humans seem to use *solving heuristics during evaluation*​
+- Adequate *visual representation* is requirement​
+- All factors may play a bigger role in *larger problems*​
+- *Validation* required
+* #2
+
+  *LEARNING AND LOCALIZING FEAR WITH COMPUTER VISION MODELS*
+
+#+ATTR_HTML: :height 400px
+file:./img/p2_alt.png
   
-** Hypotheses
-       :PROPERTIES:
-       :REVEAL_EXTRA_ATTR: data-auto-animate
-       :END:
- *H3: Representation*
- 
-- Focus on order
-- Items and boxes can be sorted by size or at random
-- *\to Solutions more interpretable if they sorted*
-  
-** Experiment
+** Problem Setting
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+- Exposure therapy research
+- Aim: computer-aided exposure therapy
+- Focus on spider phobia
+
+** Problem Setting
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
 
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
+#+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-evenly;height:40%;">
 
-- here an overview
-- of the
-- experiment
-- ...  
-** Experiment 
-       :PROPERTIES:
-       :REVEAL_EXTRA_ATTR: data-auto-animate
-       :END:
-- here a more detailed view of the evaluation trials
-** Results
-** Limitations
-** Takeaways
-* Project 2
 
-  *LEARNING AND LOCALIZING FEAR WITH COMPUTER VISION MODELS*
-** Problem Setting
+#+ATTR_HTML: :height 200px
+file:./img/example_stimuli.png
 
-- Exposure therapy research
-- Aim: computer-aided exposure therapy
-- Focus on spider phobia
+
+#+ATTR_HTML: :height 200px
+file:./img/fear_ratings.png
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-height:60%">
+
 - Stimuli = images
   - Information needed, e.g., how much fear they provoke
-  - we collected for a set of around 300 spider images fear ratings
-- Problem: Number of stimuli limited (300)
-  - constantly collecting new fear ratings for each new stimulus not
+  - We collected fear ratings for a set of around 300+ spider images
+- Problem: Limited to 300+
+  - Constantly collecting new fear ratings for each new stimulus not
     feasible
+
+
 ** Deep Neural Networks    
-- Solution: Deep neural networks create larger stimulus sets [cite/p:@lecunDeepLearning2015]
-- Train them on old data (300 images with fear ratings) so that
-  they can give you a fear rating for any new image
+- Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
+- Pre-trained on large datasets [cite/p:@dengImageNetLargescaleHierarchical2009]
+- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (300+ images with fear ratings)
+- Provide a fear rating for any new image
+
+
+{{{revealimg("./img/cnn_architecture.png.meta","Architecture of a convolutional neural network (CNN)","46rh")}}}
+
+** Methodology
+#+ATTR_REVEAL: :frag (t)
+1. Find deep learning architecture that is suitable for the task
+2. Construct training pipeline incl. cross-validation
+3. Learning curve analysis (how much data needed)
+4. Error analysis (which images are difficult for the network)
+5. Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020]) analysis to highlight most fear-related regions in each image
+6. Alignment analysis for Grad-CAM (incl. eye-tracking) and variance
+
+** Preliminiary results
+- Predictions with ResNet50 [cite/p:@heDeepResidualLearning2015]: ...
+- Explainations with Grad-CAM : ...
 ** Additional Use Cases
 
 - Content Management
@@ -191,15 +288,26 @@ file:./svg/minimum_spanning_tree.svg
 
 # Networks can assess the fear level of new images without that a person has to look at them, e.g., content on the web could be filtered by this, by testing the images for their phobic content, maybe even tailored to a specific person
 
-
-* Project 3
+* #3
 
 *LEARNING OPTIMAL EXPOSURE THERAPY PROTOCOLS WITH REINFORCEMENT LEARNING*
 
+#+ATTR_HTML: :height 400px
+file:./img/p3.png
+
+#+REVEAL_HTML: <span style="font-size: 1.33rem">PI: Filip Melinscak</span>
+
 ** Problem Setting
 
+- ...
+- ...
 - Reinforcement Learning (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018])
-
+* Schedule
+ file:./svg/gantt.svg
+* Summary
+- ...
+- ...
+- ...
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np
@@ -218,16 +326,6 @@ print(x)
     \[
     a^2 + b^2 = c^2
     \]
-* Example References :noexport:
-
-- [cite:@ottSimplifExSimplifyingExplaining2023]
-- [cite:@lageHumanloopInterpretabilityPrior2018]
-- [cite:@wynnLearningHumanlikeRepresentations2023]
-- [cite:@murawskiHowHumansSolve2016]
-- [cite:@francoTaskindependentMetricsComputational2022]
-- [cite:@dumnicPathGameCrowdsourcingTimeconstrained2019]
-- [cite:@macgregorHumanPerformanceTraveling2011]
-
 * References
    :PROPERTIES:
    :CUSTOM_ID: bibliography

@@ -6,7 +6,7 @@
 }
 
 /*
-h3 {
+``h3 {
     color: #0063a6 !important;
 }*/
 
@@ -43,3 +43,84 @@ img {
 
 }
 
+
+/* Display license of image rotated, in smaller font. */
+div.figure p:nth-child(3) {
+  opacity: 0.66;
+  font-size: 0.8em;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -1em;
+  line-height: 1.1;
+  -webkit-transform: rotate(-90deg) translate(100%);
+          transform: rotate(-90deg) translate(100%);
+  -webkit-transform-origin: top right;
+          transform-origin: top right; }
+
+
+/* CSS to control Mermaid chart styles */
+.sectionTitle {
+    font-size: 18px !important;
+    font-family: var(--r-heading-font) !important;
+}
+
+/* Customize title styling */
+.titleText {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    font-family: var(--r-heading-font) !important;
+}
+
+
+
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges;
+  font-size: 16px !important;
+  font-family: var(--r-heading-font) !important;
+}
+.grid path {
+  stroke-width: 0;
+}
+
+#tag {
+  color: white;
+  background: #fa283d;
+  width: 150px;
+  position: absolute;
+  display: none;
+  padding: 3px 6px;
+  margin-left: -80px;
+  font-size: 11px;
+}
+
+#tag:before {
+  border: solid transparent;
+  content: ' ';
+  height: 20;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  width: 0;
+  border-width: 10px;
+  border-bottom-color: #fa283d;
+  top: -20px;
+}
+.taskText {
+  fill: white;
+  text-anchor: middle;
+  font-size: 16px !important;
+  font-family: var(--r-heading-font) !important;
+}
+.taskTextOutsideRight {
+  fill: black;
+  text-anchor: start;
+}
+.taskTextOutsideLeft {
+  fill: black;
+  text-anchor: end;
+}
+
+svg[id^="mermaid-"] { min-width: 200px; max-width: 500px; }
