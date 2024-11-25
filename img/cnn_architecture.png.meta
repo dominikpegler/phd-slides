@@ -10,5 +10,5 @@
  (dc:title . "CNN architecture.")
  (imgalt . "CNN")
 ; (imgadapted . "converted from")
-  (texwidth . 0.5)
+  (texwidth . 1.0)
 )
