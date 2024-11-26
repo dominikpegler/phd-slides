@@ -150,20 +150,23 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: <div style="display: flex; flex-direction: column">
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:80%">
+#+ATTR_REVEAL: :frag (t)
 *Machine Problem-Solving*
+#+ATTR_REVEAL: :frag (t)
   - Increasingly taking over human domains
   - AI getting more complex \to black boxes \to lack of trust
   - Trust issues not new (Classical AI in 1950s) 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="width:20%">
-{{{revealimg("./img/dantzig.jpg.meta", "George Dantzig \(1914-2005\)\, father of linear programming", "22rh")}}}
+{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig \(1914-2005\)\, father of linear programming", "22rh")}}}
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
-#+ATTR_REVEAL: :frag (t)
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:80%">
+#+ATTR_REVEAL: :frag (t)
 *Evaluating Human Interpretability*
+#+ATTR_REVEAL: :frag (t)
   - Human-in-the-loop approach to evaluate interpretability
   - Understanding how a machine makes a decision
   - Critical for trust and collaboration with machines
@@ -227,6 +230,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
  file:./svg/heuristic.svg
 
+#+ATTR_REVEAL: :frag (t)
 *\to Solutions more interpretable if similar to greedy solution*
   
 ** H2: Simplicity
@@ -237,6 +241,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
  file:./svg/composition.svg
 
+#+ATTR_REVEAL: :frag (t)
 *\to Solutions more interpretable if simple*
 
 ** H3: Representation
@@ -247,6 +252,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
  file:./svg/order.svg
 
+#+ATTR_REVEAL: :frag (t)
 *\to Solutions more interpretable if sorted*
   
 ** Online-Experiment
@@ -265,7 +271,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: <img src="svg/experiment_2.svg" alt="experiment overview"/>
 /N/ = 73 participants (pilot)
 
-** Results Multilevel Analysis
+** Pilot Results
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:60%;">
 
@@ -287,9 +293,9 @@ Other findings:
 #+REVEAL_HTML: </div>
 
 
-** Results Machine Learning Analysis :noexport:
+** Pilot Results Machine Learning Analysis :noexport:
 
-** Results Eye-tracking Analysis
+** Pilot Results Eye-tracking
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;">
 - *Gaze dwell times* predictive of choice (/r/ \equal 0.20)
@@ -396,6 +402,7 @@ file:./img/example_stimuli_rated.png
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-height:60%">
 
+#+ATTR_REVEAL: :frag (t)
 - *Spider images* for exposure therapy
   - Usage requires information, e.g., how much fear they provoke
   - Fear ratings for 313 spider images collected
@@ -406,48 +413,92 @@ file:./img/example_stimuli_rated.png
     
 
 ** Deep Neural Networks    
+
 - Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
 - Pre-trained on large datasets [cite/p:@dengImageNetLargescaleHierarchical2009]
-- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings)
-- Provide a fear rating for any new image
-
-
 {{{revealimg("./img/cnn_architecture.png.meta","Architecture of a convolutional neural network (CNN)","40rh")}}}
+- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings) \to fear rating for any new image
+
+
 
 ** Research questions
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
 
+#+reveal_html:<div style="border-radius:12px;background-color:lightblue;">
 #+ATTR_REVEAL: :frag (t)
-Q1: Can a computer vision model built for object recognition learn a *latent construct* (an affective response) such as fear? If yes, 
-
+Q1: Can a computer vision model built for object recognition learn a *latent construct* such as fear?
+#+reveal_html:<div style="font-size:1.9rem;">
 #+ATTR_REVEAL: :frag (t)
-   A) How much *data* do we need?
-   B) What *erros* will it make?
+Q1-1: How much *data* do we need?
+#+ATTR_REVEAL: :frag (t)
+Q1-2: What *erros* will it make?
+#+reveal_html:</div>
+#+reveal_html:</div>
 
+#+reveal_html:<div style="border-radius:12px;background-color:lightblue;margin-top:3rem">
 #+ATTR_REVEAL: :frag (t)
 Q2: *How* does the model arrive at its judgments and how do they differ from *human judgments*?
+#+reveal_html:</div>
 
 ** Methodology
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+Q1: Can a computer vision model built for object recognition learn a *latent construct* such as fear?
+#+reveal_html:</div>
+
 #+ATTR_REVEAL: :frag (t)
-
-*Q1: Can it learn fear?*
-
 1. Find suitable deep learning *architecture* ([[https://timm.fast.ai][timm.fast.ai]])
 2. Write *training* pipeline + train model
 3. *Learning curve analysis*: Train multiple times with different amounts of data
 4. *Error analysis*: Which images are difficult to predict
 
-*Q2: How does it manifest?*
+#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+Q2: *How* does the model arrive at its judgments and how do they differ from *human judgments*?
+#+reveal_html:</div>
 
+#+ATTR_REVEAL: :frag (t)
 5. *Explain predictions*: Highlight fear-relevant regions in each image using Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020])
 6. *Alignment analysis*: How do the model's judgments differ from human judgments (uncertainty, fear-relevant regions)
 
 # 6. beyond accuracy
 
-** Preliminary Results: Predictions
+
+
+
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Predictions with ResNet50 [cite/p:@heDeepResidualLearning2015]
+
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
+#+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:60%;">
+#+ATTR_HTML: :height 600px :margin-top 0px :margin-bottom 0px
+#+caption:Predictive performance of the CNN model for each image.
+file:./svg/cnn_results.svg
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:flex-start;width:40%;">
+- Promising predictive accuracy
+- Model: ResNet50 [cite/p:@heDeepResidualLearning2015]
+- Training is possible on standard PC hardware (hours–days)
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+
+  
+
+** Preliminary Results :noexport:
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+*Predictions*
+- Model: ResNet50 [cite/p:@heDeepResidualLearning2015]
 - Some info about training time
 
   # (put bullets to the side)
@@ -455,7 +506,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 #+ATTR_HTML: :height 600px :margin-top 0px :margin-bottom 0px
  file:./svg/cnn_results.svg
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -474,7 +525,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -493,7 +544,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -512,7 +563,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -531,7 +582,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -550,7 +601,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -569,7 +620,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -588,7 +639,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -607,7 +658,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -626,7 +677,7 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Preliminary Results: Explanations
+** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -645,13 +696,23 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
 
-** Why ...
+** Why ... :noexport:
 
 **... not just LLMs?**
 
-1. Most CNNs *free and open-source* (open science, reproducibility, ...)
-2. CNNs *smaller* than transfomer LLMs (good at one task) and can run on affordable hardware
+1. CNNs *smaller* than transfomer LLMs (optimized for image tasks) and can run on affordable hardware (more efficient)
+2. Most CNNs *free and open-source* (open science, reproducibility, ...)
 3. Their decisions can be made *explainable* with methods like Grad-CAM (a consequence of 1 & 2)
+   
+** Summary
+
+- Computer vision models can learn latent construct like fear *(Q1)*
+- Explanations for model’s judgments often, but not always, understandable (fear-eliciting stimulus not highlighted) *(Q2)*
+- Pending tasks:
+  1. Explore more architectures
+  2. Error analysis
+  3. Learning curve analysis
+  4. Investigate the overlap between the model's and human judgments
 
 * #3
 

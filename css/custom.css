@@ -25,6 +25,7 @@
     font-size: 1rem !important;
     line-height: 1.2 !important;
     text-align: left;
+    position: relative;
 }
 
 .figure-number {
@@ -46,17 +47,21 @@ img {
 
 /* Display license of image rotated, in smaller font. */
 div.figure p:nth-child(3) {
-  opacity: 0.66;
-  font-size: 0.8em;
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-  margin-top: -1em;
-  line-height: 1.1;
-  -webkit-transform: rotate(-90deg) translate(100%);
-          transform: rotate(-90deg) translate(100%);
-  -webkit-transform-origin: top right;
-          transform-origin: top right; }
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    opacity: 0.66;
+    font-size: 0.8em;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: -1em;
+    line-height: 1.1;
+    -webkit-transform: rotate(-90deg) translate(100%);
+    transform: rotate(-90deg) translate(100%);
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
 
 
 /* CSS to control Mermaid chart styles */
