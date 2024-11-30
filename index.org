@@ -142,6 +142,9 @@ file:./img/p1.png
 
 
 ** Problem Setting
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
 
 #+begin_notes
 Today, I am going to present you a new study on the topic of human-machine colaboration.
@@ -150,7 +153,6 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: <div style="display: flex; flex-direction: column">
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:80%">
-#+ATTR_REVEAL: :frag (t)
 *Machine Problem-Solving*
 #+ATTR_REVEAL: :frag (t)
   - Increasingly taking over human domains
@@ -162,9 +164,32 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
+#+REVEAL_HTML: </div>
+
+** Problem Setting
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+#+begin_notes
+Today, I am going to present you a new study on the topic of human-machine colaboration.
+#+end_notes
+
+#+REVEAL_HTML: <div style="display: flex; flex-direction: column">
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:80%">
-#+ATTR_REVEAL: :frag (t)
+*Machine Problem-Solving*
+  - Increasingly taking over human domains
+  - AI getting more complex \to black boxes \to lack of trust
+  - Trust issues not new (Classical AI in 1950s) 
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="width:20%">
+{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig \(1914-2005\)\, father of linear programming", "22rh")}}}
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
+#+REVEAL_HTML: <div style="width:80%">
 *Evaluating Human Interpretability*
 #+ATTR_REVEAL: :frag (t)
   - Human-in-the-loop approach to evaluate interpretability
@@ -381,11 +406,8 @@ file:./img/p2_alt.png
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-
-
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-evenly;height:40%;">
-
 
 #+ATTR_HTML: :height 250px
 #+caption: The stimulus set.
@@ -410,15 +432,14 @@ file:./img/example_stimuli_rated.png
 - *Problem:* Set is limited to 313
   - Constantly collecting new fear ratings for each new stimulus not
     feasible
-    
 
 ** Deep Neural Networks    
 
 - Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
-- Pre-trained on large datasets [cite/p:@dengImageNetLargescaleHierarchical2009]
+- Pre-trained on large datasets (ImageNet; [cite//bare:@dengImageNetLargescaleHierarchical2009])
 {{{revealimg("./img/cnn_architecture.png.meta","Architecture of a convolutional neural network (CNN)","40rh")}}}
+#+ATTR_REVEAL: :frag (t)
 - Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings) \to fear rating for any new image
-
 
 
 ** Research questions
@@ -469,7 +490,6 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 
 
 
-
 ** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
@@ -492,20 +512,6 @@ file:./svg/cnn_results.svg
 
 
   
-
-** Preliminary Results :noexport:
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Predictions*
-- Model: ResNet50 [cite/p:@heDeepResidualLearning2015]
-- Some info about training time
-
-  # (put bullets to the side)
-  
-#+ATTR_HTML: :height 600px :margin-top 0px :margin-bottom 0px
- file:./svg/cnn_results.svg
-
 ** Preliminary Results
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
@@ -704,7 +710,7 @@ file:./svg/cnn_results.svg
 2. Most CNNs *free and open-source* (open science, reproducibility, ...)
 3. Their decisions can be made *explainable* with methods like Grad-CAM (a consequence of 1 & 2)
    
-** Summary
+** Takeaways
 
 - Computer vision models can learn latent construct like fear *(Q1)*
 - Explanations for model’s judgments often, but not always, understandable (fear-eliciting stimulus not highlighted) *(Q2)*
@@ -713,27 +719,108 @@ file:./svg/cnn_results.svg
   2. Error analysis
   3. Learning curve analysis
   4. Investigate the overlap between the model's and human judgments
-
+     
 * #3
 
-*LEARNING OPTIMAL EXPOSURE THERAPY PROTOCOLS WITH REINFORCEMENT LEARNING*
+*DEEP REINFORCEMENT LEARNING FOR FINDING OPTIMAL EXPOSURE THERAPY PROTOCOLS*
 
 #+ATTR_HTML: :height 400px
 file:./img/p3.png
-
 #+REVEAL_HTML: <span style="font-size: 1.33rem">PI: Filip Melinscak</span>
 
-** Problem Setting
 
-- ...
-- ...
-- Reinforcement Learning (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018])
+** Problem Setting
+  - *Aim*: Advance computer-aided Exposure Therapy
+  - Current *Limitations* of Exposure Therapy
+    - Highly complex and individualized process
+    - Inconsistent and subjective protocol tailoring
+    - High-dimensional variable space
+  - Need for Optimization: *Reinforcement Learning* (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018]) offers a data-driven approach
+
+
+** Reinforcement Learning
+# Background Information
+  - *An agent learns optimal actions through trial and error*
+  - *Here*: Algorithmic therapist interacts with an algorithmic patient and learns good policy
+    - Therapist: Deep RL Algorithms like Deep Q Networks (DQN; [cite//bare:@mnihPlayingAtariDeep2013])
+    - Simulated Patient: e.g., Rescorla-Wagner Model [cite/p:@rescorla1972theory] 
+
+#+caption: Exposure therapy as a reinforcement learning setting.
+#+ATTR_HTML: :height 300px :margin-top 0px :margin-bottom 0px
+#+NAME: aether_illustration
+file:./img/aether_illustration.png
+
+
+** Research Questions
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+#+reveal_html:<div style="border-radius:12px;background-color:lightblue;">
+#+ATTR_REVEAL: :frag (t)
+Q1: How can RL *model fear extinction* and optimize therapy protocols?
+#+reveal_html:</div>
+
+#+reveal_html:<div style="border-radius:12px;background-color:lightblue;margin-top:3rem">
+#+ATTR_REVEAL: :frag (t)
+Q2: Can RL improve *consistency and objectivity* in exposure therapy?
+#+reveal_html:</div>
+    
+** Planned Methodology
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+Q1: How can RL *model fear extinction* and optimize therapy protocols?
+#+reveal_html:</div>
+
+#+ATTR_REVEAL: :frag (t)
+    1. Selecting *RL algorithms* based on theoretical and practical applicability
+    2. Conducting preliminary *simulations* using models such as Rescorla-Wagner
+    3. Defining and testing *reward functions* to guide learning
+    4. Running iterative computational *experiments* to refine algorithms
+
+#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+Q2: Can RL improve *consistency and objectivity* in exposure therapy?
+#+reveal_html:</div>
+
+#+ATTR_REVEAL: :frag (t)
+Empirical validation with real subjects
+
+
+** Takeaways
+    - Aim to find good exposure therapy protocols
+    - Addressing limitations through RL
+    - Advance computer-aided exposure therapy
+    - Potential to improve therapy outcomes
+      
 * Schedule
+
+
+#+reveal_html:<div style="float:left;width:12%;display:flex;flex-direction:column;justify-content:space-evenly;height:600px">
+#+attr_html: :height 100px
+file:./img/p1.png
+#+attr_html: :height 100px
+file:./img/p2.png
+#+attr_html: :height 100px
+file:./img/p3.png
+#+reveal_html:</div>
+
+#+reveal_html:<div style="float:right;width:88%;justify-items:flex-start">
+#+ATTR_HTML: :height 600px
  file:./svg/gantt.svg
+#+reveal_html:</div>
 * Summary
-- ...
-- ...
-- ...
+# blue box
+
+#+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;">Enhancing cognitive and affective processes in human-AI interaction through machine learning</div>
+#+ATTR_REVEAL: :frag (t)
+*3 projects*: 1 in the cognitive, 2 in the affective domain
+#+ATTR_REVEAL: :frag (t)
+- #1 First results give us a clue what factors matter for *interpretability*
+- #2 AI models can *learn fear-potential in images*, but the "how" remains open
+- #3 Reinforcement learning is a promising approach to finding good *exposure therapy protocols*
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np

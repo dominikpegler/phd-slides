@@ -57,10 +57,10 @@ div.figure p:nth-child(3) {
     margin-right: 0;
     margin-top: -1em;
     line-height: 1.1;
-    -webkit-transform: rotate(-90deg) translate(100%);
-    transform: rotate(-90deg) translate(100%);
-    -webkit-transform-origin: top right;
-    transform-origin: top right;
+    -webkit-transform: rotate(-90deg) translate(100%) !important;
+    transform: rotate(-90deg) translate(100%) !important;
+    -webkit-transform-origin: top right !important;
+    transform-origin: top right !important;
 }
 
 
