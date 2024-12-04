@@ -7,6 +7,7 @@
 #+created: [2024-09-26 Thu]
 #+last_modified: [2024-09-26 Thu 21:21]
 #+author: Dominik Pegler
+#+email: dominik.pegler@univie.ac.at
 #+date: 2024-09-16
 #+REVEAL_THEME: white
 #+REVEAL_MARGIN: 0.1
@@ -19,7 +20,7 @@
 #+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
 #+cite_export: csl apa.csl
 #+REVEAL_EXTRA_CSS: css/custom.css
-#+REVEAL_TITLE_SLIDE:<div><h1>%t</h1><h3 style="color:#6b6b6b">%s<h3><p style="text-transform:none;color:black;font-weight:normal">%a<p></div>
+#+REVEAL_TITLE_SLIDE:<div><h1>%t</h1><h3 style="color:#6b6b6b">%s<h3><p style="text-transform:none;color:black;font-weight:normal">%a<vvp></div>
 #+MACRO: revealimg (eval (oer-reveal-export-attribution $1 $2 $3 $4 $5 $6))
 #+MACRO: reveallicense (eval (oer-reveal-export-attribution $1 nil $2 $3 $4 $5 $6))
 
@@ -139,7 +140,7 @@ file:./img/p3.png
 
 #+ATTR_HTML: :height 490px
 file:./img/p1.png
-
+#+REVEAL_HTML: <span style="font-size: 1.2rem">PIs: Frank Scharnowski (<a href="mailto:frank.scharnowski@univie.ac.at">frank.scharnowski@univie.ac.at)</a>, David Steyrl (<a href="mailto:david.steyrl@univie.ac.at">david.steyrl@univie.ac.at)</a> & Filip Melinscak (<a href="mailto:filip.melinscak@univie.ac.at">filip.melinscak@univie.ac.at)</a></span>
 
 ** Problem Setting
 :PROPERTIES:
@@ -427,13 +428,16 @@ file:./img/example_stimuli_rated.png
 #+ATTR_REVEAL: :frag (t)
 - *Spider images* for exposure therapy
   - Usage requires information, e.g., how much fear they provoke
-  - Fear ratings for 313 spider images collected
+  - Fear ratings for 313 spider images collected [cite/p:@karnerSpiDaDatasetSelfreport2024]
 #+ATTR_REVEAL: :frag (t)
 - *Problem:* Set is limited to 313
   - Constantly collecting new fear ratings for each new stimulus not
     feasible
 
 ** Deep Neural Networks    
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
 
 - Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
 - Pre-trained on large datasets (ImageNet; [cite//bare:@dengImageNetLargescaleHierarchical2009])
@@ -441,6 +445,17 @@ file:./img/example_stimuli_rated.png
 #+ATTR_REVEAL: :frag (t)
 - Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings) \to fear rating for any new image
 
+** Deep Neural Networks    
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+
+- Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
+- Pre-trained on large datasets (ImageNet; [cite//bare:@dengImageNetLargescaleHierarchical2009])
+{{{revealimg("./img/cnn_architecture_mod.png.meta","Architecture of a convolutional neural network (CNN)","40rh")}}}
+- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings) \to fear rating for any new image
+
+** Research questions
 
 ** Research questions
 :PROPERTIES:
@@ -491,9 +506,6 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 
 
 ** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
 
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
@@ -516,7 +528,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_046_gradcam.png
 
@@ -535,7 +547,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_111_gradcam.png
 
@@ -554,7 +566,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
  file:./img/Sp_012_gradcam.png
 
@@ -573,7 +585,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_092_gradcam.png
 
@@ -592,7 +604,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_283_gradcam.png
 
@@ -611,7 +623,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_098_gradcam.png
 
@@ -630,7 +642,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_078_gradcam.png
 
@@ -649,7 +661,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_073_gradcam.png
 
@@ -668,7 +680,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_285_gradcam.png
 
@@ -687,7 +699,7 @@ file:./svg/cnn_results.svg
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-- Explanations with Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
 
   file:./img/Sp_085_gradcam.png
 
@@ -701,6 +713,74 @@ file:./svg/cnn_results.svg
 # Sp_111_gradcam.png
 # Sp_283_gradcam.png
 # Sp_285_gradcam.png
+
+** Preliminary Results
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+*Feature Visualization*: What does a neuron in each layer look for?
+
+
+#+ATTR_HTML: :height 70px
+file:./svg/cnn_layers_early.svg
+
+*Early Layers*
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row">
+#+ATTR_HTML: :width 100%
+#+CAPTION: Activation patterns in 9 example neurons for layer 1 (left), layer 2.1 (middle) and layer 2.2 (right).
+  file:./img/features_early.png
+
+** Preliminary Results
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+*Feature Visualization*: What does a neuron in each layer look for?
+
+#+ATTR_HTML: :height 70px
+file:./svg/cnn_layers_intermediate.svg
+
+*Intermediate Layers*
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row">
+#+ATTR_HTML: :width 100%
+#+CAPTION: Activation patterns in example neurons for layer 3.1 (left), layer 3.2 (middle) and layer 3.3 (right).
+  file:./img/features_intermediate.png
+#+REVEAL_HTML: </div>
+
+
+** Preliminary Results
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+*Feature Visualization*: What does a neuron in each layer look for?
+
+#+ATTR_HTML: :height 70px
+file:./svg/cnn_layers_last.svg
+
+*Last Layers*
+
+#+REVEAL_HTML: <div style="display:flex;flex-direction:row">
+#+ATTR_HTML: :width 100%
+#+CAPTION: Activation patterns in example neurons for layer 4.1 (left), layer 4.2 (middle) and layer 4.3 (right).
+  file:./img/features_last.png
+#+REVEAL_HTML: </div>
+
+** Preliminary Results
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+*Feature Visualization*: What does a neuron in each layer look for?
+
+#+ATTR_HTML: :height 70px
+file:./svg/cnn_layers_final.svg
+
+*Final Output Node*
+
+#+ATTR_HTML: :width 100%
+#+CAPTION: Three example images that maximize the final output "Fear".
+  file:./img/features_final.png
+
 
 ** Why ... :noexport:
 
@@ -726,7 +806,7 @@ file:./svg/cnn_results.svg
 
 #+ATTR_HTML: :height 400px
 file:./img/p3.png
-#+REVEAL_HTML: <span style="font-size: 1.33rem">PI: Filip Melinscak</span>
+#+REVEAL_HTML: <span style="font-size: 1.2rem">PI: Filip Melinscak (<a href="mailto:filip.melinscak@univie.ac.at">filip.melinscak@univie.ac.at)</a></span>
 
 
 ** Problem Setting
@@ -739,16 +819,20 @@ file:./img/p3.png
 
 
 ** Reinforcement Learning
-# Background Information
-  - *An agent learns optimal actions through trial and error*
-  - *Here*: Algorithmic therapist interacts with an algorithmic patient and learns good policy
-    - Therapist: Deep RL Algorithms like Deep Q Networks (DQN; [cite//bare:@mnihPlayingAtariDeep2013])
-    - Simulated Patient: e.g., Rescorla-Wagner Model [cite/p:@rescorla1972theory] 
 
 #+caption: Exposure therapy as a reinforcement learning setting.
 #+ATTR_HTML: :height 300px :margin-top 0px :margin-bottom 0px
 #+NAME: aether_illustration
 file:./img/aether_illustration.png
+
+# Background Information
+  - *An agent learns optimal actions through trial and error*
+  - Therapist: Deep RL Algorithms like Deep Q Networks (DQN; [cite//bare:@mnihPlayingAtariDeep2013])
+  - Simulated Patient: e.g., [cite/text:@rescorla1972theory] $F_{\text{expected}} \leftarrow F_{\text{expected}} + \alpha (F_{\text{actual}} - F_{\text{expected}})$
+
+# \[
+# V_{\text{new}} = V_{\text{old}} + \alpha (\lambda - V_{\text{old}})
+# \]
 
 
 ** Research Questions
@@ -816,11 +900,11 @@ file:./img/p3.png
 
 #+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;">Enhancing cognitive and affective processes in human-AI interaction through machine learning</div>
 #+ATTR_REVEAL: :frag (t)
-*3 projects*: 1 in the cognitive, 2 in the affective domain
+*Three projects*: one in the cognitive, two in the affective domain
 #+ATTR_REVEAL: :frag (t)
-- #1 First results give us a clue what factors matter for *interpretability*
-- #2 AI models can *learn fear-potential in images*, but the "how" remains open
-- #3 Reinforcement learning is a promising approach to finding good *exposure therapy protocols*
+- *#1* Pilot results give us a clue what factors matter for *interpretability*
+- *#2* AI models can *learn fear-potential in images*, but the "how" remains open
+- *#3* Reinforcement learning is a promising approach to finding good *exposure therapy protocols*
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np
