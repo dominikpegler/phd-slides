@@ -16,7 +16,7 @@
 # +reveal_slide_footer: <div>Footer</div>
 #+reveal_single_file: t
 #+OPTIONS: num:nil toc:nil reveal_progress:t reveal_control:t reveal_slide_number:t 
-#+OPTIONS: reveal_width:1200 reveal_height:800 reveal_center:t reveal_keyboard:t reveal_overview:t
+#+OPTIONS: reveal_width:1422 reveal_height:800 reveal_center:t reveal_keyboard:t reveal_overview:t
 #+BIBLIOGRAPHY: /home/user/Dropbox/org/ref/ref.bib
 #+cite_export: csl apa.csl
 #+REVEAL_EXTRA_CSS: css/custom.css
@@ -39,12 +39,113 @@ on how to create reusable css classes
 - TODO: split bibliography if it gets too long
 - TODO: find simpler way to create (css classes?) to particular slide layouts
 
-* Overview
+* BACKGROUND
 
+# ### Motivation for the Project
+
+# In the rapidly evolving landscape of technology, Human-Computer Interaction (HCI) plays a crucial role in ensuring that technological advancements are accessible, efficient, and beneficial to users. Despite significant progress, existing systems still face substantial challenges that can hinder their effectiveness and user satisfaction. This PhD project aims to address these challenges by improving HCI through a dual-focus approach that encompasses both the cognitive and affective domains of human psychology.
+
+# #### Cognitive Domain: Enhancing Trust in Human-Machine Collaboration
+
+# One of the critical issues in human-machine collaboration is the development and maintenance of trust. Trust is fundamental to effective problem-solving, decision-making, and overall interaction between humans and machines. However, users often experience a lack of trust in automated systems, which can impede the collaborative process. This project seeks to identify the factors that influence trust in human-machine collaboration and develop strategies to enhance it. By doing so, we can create systems that users find reliable and are more willing to engage with, leading to improved performance and satisfaction in collaborative tasks.
+
+# #### Affective Domain: Emotion Awareness in Computer Interfaces and AI Agents
+
+# In the affective domain, the focus is on enhancing human-machine interaction through emotion awareness. Inspired by Rosalind Picard's work on affective computing, this project explores two primary objectives:
+
+# 1. **Emotion Recognition**: Developing systems that can accurately recognize and interpret human emotions. Emotion recognition is essential for creating interfaces and agents that understand users' emotional states, leading to more personalized and empathetic interactions.
+
+# 2. **Emotion Response**: Creating machines that can respond appropriately to human emotions. By tailoring responses to users' emotional states, we can build systems that not only react to users' needs but also influence their emotional well-being positively. This involves designing algorithms and interfaces that adapt dynamically, fostering more engaging and supportive interactions.
+
+# ### The Broader Impact
+
+# By addressing both the cognitive and affective components of HCI, this project aims to create more intuitive, empathetic, and effective human-machine interactions. Improved trust in human-machine collaboration can lead to more efficient problem-solving and decision-making processes, essential in fields such as healthcare, education, and workplace environments. Enhanced emotion awareness in interfaces and AI agents can contribute to better user experiences and satisfaction, potentially reducing frustration and increasing productivity.
+
+# Furthermore, the outcomes of this research have the potential to influence the design of future technologies, making them more user-centric and emotionally intelligent. This not only benefits individual users but also has broader societal implications, contributing to the development of technology that is more inclusive, humane, and supportive of human needs.
+
+# In summary, this PhD project addresses critical issues in HCI by focusing on improving trust in human-machine collaboration and enhancing emotion awareness in computer interfaces and AI agents. By tackling these challenges, we aim to create systems that not only perform better but also resonate more deeply with users on a cognitive and emotional level, ultimately leading to a more harmonious and effective integration of technology into our lives.
+
+# *Motivation*
+
+
+#+REVEAL_HTML: <div style="display: flex; flex-direction: column">
+#+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
+#+REVEAL_HTML: <div style="width:60%">
+
+*Rapidly Evolving Landscape of Technology*
+
+#+ATTR_REVEAL: :frag (t)
+- Reshapes communication, work, and leisure
+- Human-Computer Interaction (HCI) ensures accessibility and efficiency
+- Challenges (e.g., Trust and Transparency, Emotional Intelligence)
+
+# Building reliable and understandable systems.
+
+# Creating systems that recognize and respond to emotions.
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div style="width:40%">
+{{{revealimg("./img/hci_model.png.meta", "Model of HCI", "40rh")}}}
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+#+ATTR_REVEAL: :frag (t)
+**\to Improve HCI with focus on cognitive and affective aspects**
+
+** Cognitive Domain
+#+reveal_html: <div style="float:left;width:65%;">
+*Joint Human-Machine Problem Solving*
+#+ATTR_REVEAL: :frag (t)
+- *Examples*: Cobots (collaborative robots) in engineering and surgery, autopilot systems, self-driving cars
+- *Project Focus*
+  - *Interaction Setting*: Problem-solving game
+  - *Improvement*: Enhance trust by focusing on interpretability
+#+reveal_html: </div>
+
+#+reveal_html: <div style="float:right;width:35%;">
+{{{revealimg("./img/cobot.jpg.meta", "Collaborative Robot", 45rh")}}}
+#+reveal_html: </div>
+    
+** Affective Domain 1/2
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+#+reveal_html: <div style="float:left;width:75%;">
+For effective and natural human-computer interactions, computers must not only *_recognize_* but also respond to *human emotions* (Affective Computing;  [cite//bare:@picardAffectiveComputing1997])
+
+#+ATTR_REVEAL: :frag (t)
+- *Examples*: Interfaces with emotional content, e.g., images on websites, mobile apps
+- *Project Focus*
+  - *Interaction Setting*: Computerized exposure therapy
+  - *Improvement*: Automatic recognition of fear potential in images
+#+reveal_html: </div>
+
+#+reveal_html: <div style="float:right;width:25%;">
+{{{revealimg("./img/affective_computing.jpg.meta", "Affective Computing (1997) by Rosalind Picard.", 45rh")}}}
+#+reveal_html: </div>
+** Affective Domain 2/2
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
+#+reveal_html: <div style="float:left;width:75%;">
+For effective and natural human-computer interactions, computers must not only recognize but also *_respond_* to *human emotions* (Affective Computing;  [cite//bare:@picardAffectiveComputing1997])
+
+#+ATTR_REVEAL: :frag (t)
+- *Examples*: Recommender systems, care robot, counseling chatbot
+- *Project Focus*
+  - *Interaction Setting*: Computerized exposure therapy
+  - *Improvement*: Optimize sequence of stimulus presentation in response to patient's state
+#+reveal_html: </div>
+
+#+reveal_html: <div style="float:right;width:25%;">
+{{{revealimg("./img/affective_computing.jpg.meta", "Affective Computing (1997) by Rosalind Picard.", 45rh")}}}
+#+reveal_html: </div>
+** Overview
 
 # blue box
 
-#+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;">Enhancing cognitive and affective processes in human-AI interaction through machine learning</div>
+#+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;"><b>Enhancing Human-Computer Interaction (HCI)</b></div>
 
 # outer div
 
@@ -60,17 +161,17 @@ on how to create reusable css classes
 
 # item 1-1
 
-#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem">
+#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem; width:100%">
 
 #+reveal_html:<div style="width:15%;">
 #+ATTR_HTML: :height 100px
-file:./img/p1.png
+file:./img/p1_update.png
 #+reveal_html:</div>
 
 #+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
 
-#+reveal_html:<div style="font-weight:bold;">#1 – Interpretability</div>
-#+reveal_html:<div style="font-size:1.6rem;text-align:left">Enhancing joint human-machine problem solving by optimizing the machine for interpretability</div>
+#+reveal_html:<div style="font-weight:bold;">Joint Human-Machine Problem Solving</div>
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Addressing trust through human interpretability</div>
 
 # end of item 1-1
 #+reveal_html:</div>
@@ -85,23 +186,23 @@ file:./img/p1.png
 
 # header 2
 
-#+reveal_html:<div style="color:#7e7e7e;font-size:1.4rem;font-weight:bold;margin-bottom:4px">Affective Domain: Exposure Therapy</div>
+#+reveal_html:<div style="color:#7e7e7e;font-size:1.4rem;font-weight:bold;margin-bottom:4px">Affective Domain: Phobias</div>
 
 # item 2-1
 
-#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem">
+#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem; width:100%">
 
 #+reveal_html:<div style="width:15%;">
 #+ATTR_HTML: :height 100px
-file:./img/p2.png
+file:./img/p2_crop.png
 #+reveal_html:</div>
 
 #+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
 
-#+reveal_html:<div style="font-weight:bold;">#2 – Fear Prediction in Images</div>
+#+reveal_html:<div style="font-weight:bold;">Enhancing Interaction through Emotional Awareness</div>
 
 
-#+reveal_html:<div style="font-size:1.6rem;text-align:left">Advancing computer-aided Exposure Therapy by automatically evaluating fear-related stimuli through artificial neural networks.</div>
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Recognizing fear potential in images</div>
 
 # end of item 2-1
 #+reveal_html:</div>
@@ -109,18 +210,18 @@ file:./img/p2.png
 
 # item 2-2
 
-#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem">
+#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem; width:100%">
 
 #+reveal_html:<div style="width:15%;">
 #+ATTR_HTML: :height 100px
-file:./img/p3.png
+file:./img/p3_other.png
 #+reveal_html:</div>
 
 #+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
 
-#+reveal_html:<div style="font-weight:bold;">#3 – Optimizing Stimulus Sequences</div>
+#+reveal_html:<div style="font-weight:bold;">Optimal Interaction in Therapy</div>
 
-#+reveal_html:<div style="font-size:1.6rem;text-align:left"> Advancing computer-aided Exposure Therapy by optimizing therapy protocols using reinforcement learning (RL).</div>
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Selecting  stimulus images based on patient's state</div>
 
 # end of item 2-2
 #+reveal_html:</div>
@@ -133,13 +234,106 @@ file:./img/p3.png
 # end of outer div
 #+reveal_html:</div>
 
+** Overview :noexport:
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: data-auto-animate
+:END:
 
-* #1
+# blue box
 
-*INTERPRETABILITY OF MACHINE-GENERATED SOLUTIONS TO COMBINATORIAL DESIGN PROBLEMS*
+#+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;"><b>Enhancing Human-Computer Interaction (HCI)</b></div>
 
-#+ATTR_HTML: :height 490px
-file:./img/p1.png
+# outer div
+
+#+reveal_html:<div style="display:flex;flex-direction:column;font-size:2.0rem">
+
+# grey box 1
+
+#+reveal_html:<div style="display:flex;flex-direction:column;align-items:flex-start;background:#efefef;border-radius:20px;margin-top:8px;margin-bottom:4px;padding:8px">
+
+# header 1
+
+#+reveal_html:<div style="color:#7e7e7e;font-weight:bold;font-size:1.4rem;margin-bottom:4px">Cognitive Domain: Problem Solving</div>
+
+# item 1-1
+
+#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem; width:100%">
+
+#+reveal_html:<div style="width:15%;">
+#+ATTR_HTML: :height 100px
+file:./img/p1_update.png
+#+reveal_html:</div>
+
+#+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
+
+#+reveal_html:<div style="font-weight:bold;">Joint Human-Machine Problem Solving</div>
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Addressing trust through human interpretability</div>
+
+# end of item 1-1
+#+reveal_html:</div>
+#+reveal_html:</div>
+
+# end of grey box 1
+#+reveal_html:</div>
+
+# grey box 2
+
+#+reveal_html:<div style="display:flex;flex-direction:column;align-items:flex-start;background:#efefef;border-radius:20px;margin-top:4px;margin-bottom:0px;padding:8px">
+
+# header 2
+
+#+reveal_html:<div style="color:#7e7e7e;font-size:1.4rem;font-weight:bold;margin-bottom:4px">Affective Domain: Phobias</div>
+
+# item 2-1
+
+#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem; width:100%">
+
+#+reveal_html:<div style="width:15%;">
+#+ATTR_HTML: :height 100px
+file:./img/p2_crop.png
+#+reveal_html:</div>
+
+#+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
+
+#+reveal_html:<div style="font-weight:bold;">Enhancing Interaction through Emotional Awareness</div>
+
+
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Awareness of fear potential in images using artificial neural networks</div>
+
+# end of item 2-1
+#+reveal_html:</div>
+#+reveal_html:</div>
+
+# item 2-2
+
+#+reveal_html:<div style="display:flex; flex-direction:row; margin-top:1rem; width:100%">
+
+#+reveal_html:<div style="width:15%;">
+#+ATTR_HTML: :height 100px
+file:./img/p3_other.png
+#+reveal_html:</div>
+
+#+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
+
+#+reveal_html:<div style="font-weight:bold;">Optimal Interaction in Therapy</div>
+
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Selecting  stimulus images based on patient's state</div>
+
+# end of item 2-2
+#+reveal_html:</div>
+#+reveal_html:</div>
+
+
+# end of grey box 2
+#+reveal_html:</div>
+
+# end of outer div
+#+reveal_html:</div>
+
+* JOINT HUMAN-MACHINE PROBLEM SOLVING
+
+#+ATTR_HTML: :height 300px
+file:./img/p1_update.png
 #+REVEAL_HTML: <span style="font-size: 1.2rem">PIs: Frank Scharnowski (<a href="mailto:frank.scharnowski@univie.ac.at">frank.scharnowski@univie.ac.at)</a>, David Steyrl (<a href="mailto:david.steyrl@univie.ac.at">david.steyrl@univie.ac.at)</a> & Filip Melinscak (<a href="mailto:filip.melinscak@univie.ac.at">filip.melinscak@univie.ac.at)</a></span>
 
 ** Problem Setting
@@ -161,7 +355,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
   - Trust issues not new (Classical AI in 1950s) 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="width:20%">
-{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig \(1914-2005\)\, father of linear programming", "22rh")}}}
+{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig \(1914-2005\)", "22rh")}}}
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
@@ -286,7 +480,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
-#+REVEAL_HTML: <img src="svg/experiment_1.svg" alt="experiment overview"/>
+#+REVEAL_HTML: <img src="svg/experiment_1.svg" alt="experiment overview" style="max-height:666px"/>
 /N/ = 73 participants (pilot)
 
 ** Online-Experiment
@@ -294,7 +488,7 @@ Today, I am going to present you a new study on the topic of human-machine colab
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
-#+REVEAL_HTML: <img src="svg/experiment_2.svg" alt="experiment overview"/>
+#+REVEAL_HTML: <img src="svg/experiment_2.svg" alt="experiment detail" style="max-height:666px"/>
 /N/ = 73 participants (pilot)
 
 ** Pilot Results
@@ -309,11 +503,11 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:40%;">
 - *All three* predictors relevant for people's choices
 - *Order* and *Heuristic* most influental
-- *Moderate effect*: /R²/\equal0.17 [cite/p:@cohenStatisticalPowerAnalysis1988]
+- *Explained variance*: /R²/\equal0.17
 #+REVEAL_HTML: <div style="font-size:1.5rem;">
-Other findings:
-  - Considerable participant variability in all predictors
-  - Self-reported problem-solving skills ("PSI") and solving performance do not moderate choice
+# Other findings:
+#  - Considerable participant variability in all predictors
+#  - Self-reported problem-solving skills ("PSI") and solving performance do not moderate choice
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
@@ -321,7 +515,7 @@ Other findings:
 
 ** Pilot Results Machine Learning Analysis :noexport:
 
-** Pilot Results Eye-tracking
+** Pilot Results Eye-tracking :noexport:
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;">
 - *Gaze dwell times* predictive of choice (/r/ \equal 0.20)
@@ -332,39 +526,42 @@ Other findings:
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:center;">
 
 
-#+ATTR_HTML: :margin-top 0px :margin-bottom 0px
+#+ATTR_HTML: :height 500px :margin-bottom 0px
 #+caption:Heatmap indicating gaze dwell times during an evaluation trial.
 file:./img/eye_example.png
 
-#+ATTR_HTML: :height 450px :margin-top 0px :margin-bottom 0px
-#+caption:Correlation (with 95% confidence interval) of gaze dwell time (right versus left) with the outcome variable 'choice', highlighting the relationship between where participants direct their gaze and their choices.
- file:./img/eye_correlation.png
+# #+ATTR_HTML: :height 450px :margin-top 0px :margin-bottom 0px
+# #+caption:Correlation (with 95% confidence interval) of gaze dwell time (right versus left) with the outcome variable 'choice', highlighting the relationship between where participants direct their gaze and their choices.
+#  file:./img/eye_correlation.png
 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
 ** Limitations
-- Did we measure *interpretability*?
-- Focus on *small problems* (diversity of solutions limited)
-- Only tested for optimal solutions, *no suboptimal solutions*
-- Eye-Tracking via webcam very noisy
+1. Did we measure *interpretability*?
+2. Focus on *small problems* (diversity of solutions limited)
+3. Only tested for optimal solutions, *no suboptimal solutions*
 
-# maybe remove participants with very low accuracy? is accuracy stored somewhere?
+#+ATTR_REVEAL: :frag (t)
+\to Follow-up publication, e.g., with collaboration task to address limitation 1
+** Current Status
 
-*Possible next steps*
+- *Completed*: Experimental design, analysis pipeline and pilot data collection
+
+- *Pending*:
+
+  1. Preregistration
+  2. Confirmatory data collection & analysis
+  3. Write draft
+   
+- *Publication*: Early 2025
+
+- *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Cybernetics, IEEE Transactions on Systems, Man, and Cybernetics, Computers in Human Behavior/
+
+** Possible future directions :noexport:
 #+ATTR_HTML: :width 100% :margin-top 0px :margin-bottom 0px
- file:./svg/next_steps.svg
+file:./svg/next_steps.svg
 
-** Limitations :noexport:
-- Did we measure *interpretability*?
-- Focus on *small problems* (diversity of solutions limited)
-- Only tested for optimal solutions, *no suboptimal solutions*
-
-*Possible next steps*
-
-1. Collaboration task (to validate results)
-2. One cognitive model instead of three
-3. Neural network analysis (CNNs, GNNs) to learn participants' preferences and try to explain them
 
 ** Takeaways
 - Humans seem to use *solving heuristics during evaluation*​
@@ -372,41 +569,35 @@ file:./img/eye_example.png
 - All factors may play a bigger role in *larger problems*​
 - *Validation* required
 
-#+REVEAL_HTML: <div style="font-size:0.8rem;margin-top:5rem">
-This project is supported by [[https://www.ffg.at][www.ffg.at]]
-#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div style="font-size:0.8rem;margin-top:2rem;margin-bottom:1rem;">This project is funded by <a href="https://www.ffg.at">www.ffg.at</a></div>
 #+ATTR_HTML: :height 40px
 file:./svg/ffg_logo_en.svg
+#+REVEAL_HTML: </div>
 
-* #2
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div style="font-size:0.8rem;margin-top:2rem;margin-bottom:1rem">and carried out in association with</div>
+#+REVEAL_HTML: <div style="display:flex;justify-content:center;align-items:center;">
 
-  *LEARNING AND LOCALIZING FEAR WITH COMPUTER VISION MODELS*
+#+ATTR_HTML: :width 130px
+file:./svg/UniWien_CMYK_A4.svg
 
-#+ATTR_HTML: :height 400px
-file:./img/p2_alt.png
+#+ATTR_HTML: :height 50vpx
+file:./svg/tu_logo.svg
+
+#+ATTR_HTML: :width 120px
+file:./img/tttech_logo.png
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
+* INTERACTION WITH EMOTIONAL AWARENESS
+
+#+ATTR_HTML: :height 300px
+file:./img/p2_crop.png
   
 ** Problem Setting
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-#+reveal_html: <div style="float:left;width:78%;">
-*Background: "Affective Computing" [cite/p:@picardAffectiveComputing1997]*
-  - Technology that relates to, arises from, or influences emotions
-  - For effective and natural human-computer interactions, computers must not only recognize but also respond to human emotions
-
-*Our study: Phobia Research*
-- Aim: Advance computer-aided exposure therapy
-- Focus: Spider phobia
-#+reveal_html: </div>
-
-#+reveal_html: <div style="float:right;width:22%;">
-{{{revealimg("./img/affective_computing.jpg.meta", "Affective Computing (1997) by Rosalind Picard.", 45rh")}}}
-# {{{revealimg("./img/picard.jpg.meta", "Scientist\, inventor\, entrepreneur\, author\, and engineer Rosalind Picard.", "30rh")}}}
-#+reveal_html: </div>
-** Problem Setting
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-evenly;height:40%;">
 
@@ -426,45 +617,39 @@ file:./img/example_stimuli_rated.png
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;max-height:60%">
 
 #+ATTR_REVEAL: :frag (t)
-- *Spider images* for exposure therapy
+- *Interaction Setting*: Computerized Exposure Therapy
+- *Images with emotional content* (e.g., spiders)
   - Usage requires information, e.g., how much fear they provoke
-  - Fear ratings for 313 spider images collected [cite/p:@karnerSpiDaDatasetSelfreport2024]
+  - Fear ratings for 313 spider images [cite/p:@karnerSpiDaDatasetSelfreport2024]
 #+ATTR_REVEAL: :frag (t)
-- *Problem:* Set is limited to 313
-  - Constantly collecting new fear ratings for each new stimulus not
-    feasible
+- *Improvement*: Automatic evaluation of fear potential in new images
 
 ** Deep Neural Networks    
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
-- Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
+- Use deep neural networks to rate new images [cite/p:@lecunDeepLearning2015]
 - Pre-trained on large datasets (ImageNet; [cite//bare:@dengImageNetLargescaleHierarchical2009])
 {{{revealimg("./img/cnn_architecture.png.meta","Architecture of a convolutional neural network (CNN)","40rh")}}}
-#+ATTR_REVEAL: :frag (t)
-- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings) \to fear rating for any new image
 
 ** Deep Neural Networks    
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
-- Solution: Use deep neural networks to create larger stimulus sets [cite/p:@lecunDeepLearning2015]
+- Use deep neural networks to rate new images [cite/p:@lecunDeepLearning2015]
 - Pre-trained on large datasets (ImageNet; [cite//bare:@dengImageNetLargescaleHierarchical2009])
 {{{revealimg("./img/cnn_architecture_mod.png.meta","Architecture of a convolutional neural network (CNN)","40rh")}}}
-- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Fine-tune on own data (313 images with fear ratings) \to fear rating for any new image
+- Transfer Learning [cite/p:@yosinskiHowTransferableAre2014]: Adapt & fine-tune on own data (313 images with fear ratings) \to *"Spider-Fear-Network"*
 
 ** Research questions
 
 ** Research questions
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
 
 #+reveal_html:<div style="border-radius:12px;background-color:lightblue;">
 #+ATTR_REVEAL: :frag (t)
-Q1: Can a computer vision model built for object recognition learn a *latent construct* such as fear?
+Q1: Can computer vision models built for object recognition learn a *latent construct* such as fear?
 #+reveal_html:<div style="font-size:1.9rem;">
 #+ATTR_REVEAL: :frag (t)
 Q1-1: How much *data* do we need?
@@ -478,34 +663,39 @@ Q1-2: What *erros* will it make?
 Q2: *How* does the model arrive at its judgments and how do they differ from *human judgments*?
 #+reveal_html:</div>
 
-** Methodology
+** Methodology :noexport:
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
-#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
-Q1: Can a computer vision model built for object recognition learn a *latent construct* such as fear?
+#+reveal_html:<div style="border-radius:12px;background-color:lightblue;">
+Q1: Can computer vision models built for object recognition learn a *latent construct* such as fear?
 #+reveal_html:</div>
 
+
+#+reveal_html:<div style="font-size:2.2rem;">
 #+ATTR_REVEAL: :frag (t)
 1. Find suitable deep learning *architecture* ([[https://timm.fast.ai][timm.fast.ai]])
 2. Write *training* pipeline + train model
 3. *Learning curve analysis*: Train multiple times with different amounts of data
 4. *Error analysis*: Which images are difficult to predict
+#+reveal_html:</div>
 
-#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+#+reveal_html:<div style="border-radius:12px;background-color:lightblue;">
 Q2: *How* does the model arrive at its judgments and how do they differ from *human judgments*?
 #+reveal_html:</div>
 
+#+reveal_html:<div style="font-size:2.2rem;">
 #+ATTR_REVEAL: :frag (t)
 5. *Explain predictions*: Highlight fear-relevant regions in each image using Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020])
 6. *Alignment analysis*: How do the model's judgments differ from human judgments (uncertainty, fear-relevant regions)
-
-# 6. beyond accuracy
-
+#+reveal_html:</div>
 
 
-** Preliminary Results
+
+# prediction
+
+** First Results: Predictions
 
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
@@ -523,203 +713,56 @@ file:./svg/cnn_results.svg
 #+REVEAL_HTML: </div>
 
 
-  
-** Preliminary Results
+
+# grad cam
+
+** Attributions
+
+** First Results: Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
-
-  file:./img/Sp_046_gradcam.png
-
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
-
-  file:./img/Sp_111_gradcam.png
-
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
-
- file:./img/Sp_012_gradcam.png
-
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
-
-  file:./img/Sp_092_gradcam.png
-
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020])
 
   file:./img/Sp_283_gradcam.png
 
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
+** First Results: Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020])
 
-  file:./img/Sp_098_gradcam.png
+  file:./img/Sp_111_gradcam.png
 
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
+** First Results: Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
-
-  file:./img/Sp_078_gradcam.png
-
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
-
-  file:./img/Sp_073_gradcam.png
-
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020])
 
   file:./img/Sp_285_gradcam.png
 
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
-
-** Preliminary Results
+** First Results: Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Explanations* using Grad-CAM [cite/p:@selvarajuGradCAMVisualExplanations2020]
+Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGradCAMVisualExplanations2020])
 
-  file:./img/Sp_085_gradcam.png
+  file:./img/Sp_073_gradcam.png
 
-# Sp_012_gradcam.png
-# Sp_046_gradcam.png
-# Sp_073_gradcam.png
-# Sp_078_gradcam.png
-# Sp_085_gradcam.png
-# Sp_092_gradcam.png
-# Sp_098_gradcam.png
-# Sp_111_gradcam.png
-# Sp_283_gradcam.png
-# Sp_285_gradcam.png
+** Feature Visualization
 
-** Preliminary Results
+# show this as a second method to get an idea how these models come to their judgments. and mention that this is not at the present moment planned to be part of the publicatoin, but could potentially lead to a follow-up paper. I found it interesting and wanted to show it anyway.
+
+# at the end of this section. this approach could work for many things in psychology where we do not exactly know how the mind works: train a neural network to achieve the same behavior (such as a fear response) and once it does it well enough, work backwards and look into the model and try to explain that behavior.
+
+# e.g., rating how pleasing people find complex images of an urban landscape. or artworks. and then trying to extract the features in these images that led to people's judgments. 
+
+** First Results: Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Feature Visualization*: What does a neuron in each layer look for?
-
+What does a neuron in each layer look for?
 
 #+ATTR_HTML: :height 70px
 file:./svg/cnn_layers_early.svg
@@ -731,11 +774,11 @@ file:./svg/cnn_layers_early.svg
 #+CAPTION: Activation patterns in 9 example neurons for layer 1 (left), layer 2.1 (middle) and layer 2.2 (right).
   file:./img/features_early.png
 
-** Preliminary Results
+** First Results: Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Feature Visualization*: What does a neuron in each layer look for?
+What does a neuron in each layer look for?
 
 #+ATTR_HTML: :height 70px
 file:./svg/cnn_layers_intermediate.svg
@@ -748,12 +791,11 @@ file:./svg/cnn_layers_intermediate.svg
   file:./img/features_intermediate.png
 #+REVEAL_HTML: </div>
 
-
-** Preliminary Results
+** First Results: Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Feature Visualization*: What does a neuron in each layer look for?
+What does a neuron in each layer look for?
 
 #+ATTR_HTML: :height 70px
 file:./svg/cnn_layers_last.svg
@@ -766,11 +808,11 @@ file:./svg/cnn_layers_last.svg
   file:./img/features_last.png
 #+REVEAL_HTML: </div>
 
-** Preliminary Results
+** First Results: Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-*Feature Visualization*: What does a neuron in each layer look for?
+What does a neuron in each layer look for?
 
 #+ATTR_HTML: :height 70px
 file:./svg/cnn_layers_final.svg
@@ -790,33 +832,46 @@ file:./svg/cnn_layers_final.svg
 2. Most CNNs *free and open-source* (open science, reproducibility, ...)
 3. Their decisions can be made *explainable* with methods like Grad-CAM (a consequence of 1 & 2)
    
+** Current Status
+- *Completed*: Concept, Analysis Pipeline
+- *Pending*:
+  - Explore more architectures
+  - Error & learning curve analysis
+  - Investigate overlap with human judgments
+  - Write draft
+- *Publication*: 2025
+- *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior/
+
+
 ** Takeaways
 
 - Computer vision models can learn latent construct like fear *(Q1)*
-- Explanations for model’s judgments often, but not always, understandable (fear-eliciting stimulus not highlighted) *(Q2)*
-- Pending tasks:
-  1. Explore more architectures
-  2. Error analysis
-  3. Learning curve analysis
-  4. Investigate the overlap between the model's and human judgments
-     
-* #3
+- Model’s judgments often, but not always, understandable (fear-eliciting stimulus not highlighted) *(Q2)*
+  
+* OPTIMAL INTERACTION IN EXPOSURE THERAPY
 
-*DEEP REINFORCEMENT LEARNING FOR FINDING OPTIMAL EXPOSURE THERAPY PROTOCOLS*
-
-#+ATTR_HTML: :height 400px
-file:./img/p3.png
+#+ATTR_HTML: :height 300px
+file:./img/p3_other.png
 #+REVEAL_HTML: <span style="font-size: 1.2rem">PI: Filip Melinscak (<a href="mailto:filip.melinscak@univie.ac.at">filip.melinscak@univie.ac.at)</a></span>
 
 
 ** Problem Setting
-  - *Aim*: Advance computer-aided Exposure Therapy
-  - Current *Limitations* of Exposure Therapy
-    - Highly complex and individualized process
-    - Inconsistent and subjective protocol tailoring
-    - High-dimensional variable space
-  - Need for Optimization: *Reinforcement Learning* (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018]) offers a data-driven approach
 
+#+reveal_html: <div style="float:right;width:75%;">
+#+ATTR_REVEAL: :frag (t)
+- *Interaction Setting*: Computerized Exposure Therapy
+- *Improvement*: Find optimal stimulus sequence based on patient's state
+- *Challenges*:
+  - Highly complex and individualized process
+  - Inconsistent and subjective protocol tailoring
+  - High-dimensional variable space
+#+reveal_html: </div>
+
+#+reveal_html: <div style="float:right;width:25%;">
+#+ATTR_HTML: :height 300px :margin-top 0px :margin-bottom 0px
+#+NAME: sequence_illustration
+file:./img/p3_sequence.png
+#+reveal_html: </div>
 
 ** Reinforcement Learning
 
@@ -825,8 +880,9 @@ file:./img/p3.png
 #+NAME: aether_illustration
 file:./img/aether_illustration.png
 
-# Background Information
-  - *An agent learns optimal actions through trial and error*
+#+ATTR_REVEAL: :frag (t)
+  - *Reinforcement Learning* (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018]) offers a data-driven approach
+  - RL: Agent learns optimal actions through trial and error
   - Therapist: Deep RL Algorithms like Deep Q Networks (DQN; [cite//bare:@mnihPlayingAtariDeep2013])
   - Simulated Patient: e.g., [cite/text:@rescorla1972theory] $F_{\text{expected}} \leftarrow F_{\text{expected}} + \alpha (F_{\text{actual}} - F_{\text{expected}})$
 
@@ -855,56 +911,80 @@ Q2: Can RL improve *consistency and objectivity* in exposure therapy?
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
 
-#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+#+reveal_html:<div style="font-size:2.6rem;border-radius:12px;background-color:lightblue;">
 Q1: How can RL *model fear extinction* and optimize therapy protocols?
 #+reveal_html:</div>
 
+#+reveal_html:<div style="font-size:2.4rem;">
 #+ATTR_REVEAL: :frag (t)
     1. Selecting *RL algorithms* based on theoretical and practical applicability
     2. Conducting preliminary *simulations* using models such as Rescorla-Wagner
     3. Defining and testing *reward functions* to guide learning
     4. Running iterative computational *experiments* to refine algorithms
+#+reveal_html:</div>
 
-#+reveal_html:<div style="font-size:1.8rem;border-radius:12px;background-color:lightblue;">
+#+reveal_html:<div style="font-size:2.6rem;border-radius:12px;background-color:lightblue;">
 Q2: Can RL improve *consistency and objectivity* in exposure therapy?
 #+reveal_html:</div>
 
+#+reveal_html:<div style="font-size:2.4rem;">
 #+ATTR_REVEAL: :frag (t)
 Empirical validation with real subjects
+#+reveal_html:</div>
 
+** Current Status
 
-** Takeaways
-    - Aim to find good exposure therapy protocols
-    - Addressing limitations through RL
-    - Advance computer-aided exposure therapy
+- *Completed*: Concept (partly)
+
+- *Pending*:
+
+  1. Literature Review
+  2. Select Algorithms
+  3. Run Simulations
+  4. Design Experiment
+   
+- *Publication*: 2026
+
+- *Target journals*: /Foundations and Trends in Machine Learning, International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior/
+  
+** Takeaways :noexport:
+    - Aim to advance computer-aided exposure therapy
+    - Find good exposure therapy protocols
+    - Address limitations through RL
     - Potential to improve therapy outcomes
       
+* Open Science
+
+#+ATTR_HTML: :height 300px
+[[file:./img/open_science.jpg]]
+
+All data, code, material, preregistrations will be made openly available on [[https://osf.io/][osf.io]]
+
 * Schedule
 
 
-#+reveal_html:<div style="float:left;width:12%;display:flex;flex-direction:column;justify-content:space-evenly;height:600px">
-#+attr_html: :height 100px
-file:./img/p1.png
-#+attr_html: :height 100px
-file:./img/p2.png
-#+attr_html: :height 100px
-file:./img/p3.png
+#+reveal_html:<div style="float:left;width:7%;display:flex;flex-direction:column;justify-content:space-evenly;height:600px">
+#+attr_html: :max-width 100px
+file:./img/p1_update.png
+#+attr_html: :max-width 100px
+file:./img/p2_crop.png
+#+attr_html: :max-width 100px
+file:./img/p3_other.png
 #+reveal_html:</div>
 
-#+reveal_html:<div style="float:right;width:88%;justify-items:flex-start">
-#+ATTR_HTML: :height 600px
+#+reveal_html:<div style="float:right;width:93%;justify-items:flex-start">
+#+ATTR_HTML: :width 1350px :margin-top 0px
  file:./svg/gantt.svg
 #+reveal_html:</div>
+
 * Summary
 # blue box
 
-#+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;">Enhancing cognitive and affective processes in human-AI interaction through machine learning</div>
+#+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;"><b>Enhancing Human-Computer Interaction (HCI)</b></div>
 #+ATTR_REVEAL: :frag (t)
-*Three projects*: one in the cognitive, two in the affective domain
-#+ATTR_REVEAL: :frag (t)
-- *#1* Pilot results give us a clue what factors matter for *interpretability*
-- *#2* AI models can *learn fear-potential in images*, but the "how" remains open
-- *#3* Reinforcement learning is a promising approach to finding good *exposure therapy protocols*
+1. First results show us how we can enhance *trust* by finding factors that matter for interpretability
+2. AI models can *learn fear-potential in images*, but the "how" remains open
+3. Reinforcement learning is a promising approach for finding good interaction protocols in *computerized exposure therapy*
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np
