@@ -41,40 +41,12 @@ on how to create reusable css classes
 
 * BACKGROUND
 
-# ### Motivation for the Project
-
-# In the rapidly evolving landscape of technology, Human-Computer Interaction (HCI) plays a crucial role in ensuring that technological advancements are accessible, efficient, and beneficial to users. Despite significant progress, existing systems still face substantial challenges that can hinder their effectiveness and user satisfaction. This PhD project aims to address these challenges by improving HCI through a dual-focus approach that encompasses both the cognitive and affective domains of human psychology.
-
-# #### Cognitive Domain: Enhancing Trust in Human-Machine Collaboration
-
-# One of the critical issues in human-machine collaboration is the development and maintenance of trust. Trust is fundamental to effective problem-solving, decision-making, and overall interaction between humans and machines. However, users often experience a lack of trust in automated systems, which can impede the collaborative process. This project seeks to identify the factors that influence trust in human-machine collaboration and develop strategies to enhance it. By doing so, we can create systems that users find reliable and are more willing to engage with, leading to improved performance and satisfaction in collaborative tasks.
-
-# #### Affective Domain: Emotion Awareness in Computer Interfaces and AI Agents
-
-# In the affective domain, the focus is on enhancing human-machine interaction through emotion awareness. Inspired by Rosalind Picard's work on affective computing, this project explores two primary objectives:
-
-# 1. **Emotion Recognition**: Developing systems that can accurately recognize and interpret human emotions. Emotion recognition is essential for creating interfaces and agents that understand users' emotional states, leading to more personalized and empathetic interactions.
-
-# 2. **Emotion Response**: Creating machines that can respond appropriately to human emotions. By tailoring responses to users' emotional states, we can build systems that not only react to users' needs but also influence their emotional well-being positively. This involves designing algorithms and interfaces that adapt dynamically, fostering more engaging and supportive interactions.
-
-# ### The Broader Impact
-
-# By addressing both the cognitive and affective components of HCI, this project aims to create more intuitive, empathetic, and effective human-machine interactions. Improved trust in human-machine collaboration can lead to more efficient problem-solving and decision-making processes, essential in fields such as healthcare, education, and workplace environments. Enhanced emotion awareness in interfaces and AI agents can contribute to better user experiences and satisfaction, potentially reducing frustration and increasing productivity.
-
-# Furthermore, the outcomes of this research have the potential to influence the design of future technologies, making them more user-centric and emotionally intelligent. This not only benefits individual users but also has broader societal implications, contributing to the development of technology that is more inclusive, humane, and supportive of human needs.
-
-# In summary, this PhD project addresses critical issues in HCI by focusing on improving trust in human-machine collaboration and enhancing emotion awareness in computer interfaces and AI agents. By tackling these challenges, we aim to create systems that not only perform better but also resonate more deeply with users on a cognitive and emotional level, ultimately leading to a more harmonious and effective integration of technology into our lives.
-
-# *Motivation*
-
-
 #+REVEAL_HTML: <div style="display: flex; flex-direction: column">
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:60%">
 
 *Rapidly Evolving Landscape of Technology*
 
-#+ATTR_REVEAL: :frag (t)
 - Reshapes communication, work, and leisure
 - Human-Computer Interaction (HCI) ensures accessibility and efficiency
 - Challenges (e.g., Trust and Transparency, Emotional Intelligence)
@@ -104,7 +76,7 @@ on how to create reusable css classes
 #+reveal_html: </div>
 
 #+reveal_html: <div style="float:right;width:35%;">
-{{{revealimg("./img/cobot.jpg.meta", "Collaborative Robot", 45rh")}}}
+{{{revealimg("./img/cobot.jpg.meta", "", 40rh")}}}
 #+reveal_html: </div>
     
 ** Affective Domain 1/2
@@ -337,14 +309,6 @@ file:./img/p1_update.png
 #+REVEAL_HTML: <span style="font-size: 1.2rem">PIs: Frank Scharnowski (<a href="mailto:frank.scharnowski@univie.ac.at">frank.scharnowski@univie.ac.at)</a>, David Steyrl (<a href="mailto:david.steyrl@univie.ac.at">david.steyrl@univie.ac.at)</a> & Filip Melinscak (<a href="mailto:filip.melinscak@univie.ac.at">filip.melinscak@univie.ac.at)</a></span>
 
 ** Problem Setting
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-
-#+begin_notes
-Today, I am going to present you a new study on the topic of human-machine colaboration.
-#+end_notes
-
 #+REVEAL_HTML: <div style="display: flex; flex-direction: column">
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:80%">
@@ -355,36 +319,13 @@ Today, I am going to present you a new study on the topic of human-machine colab
   - Trust issues not new (Classical AI in 1950s) 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="width:20%">
-{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig \(1914-2005\)", "22rh")}}}
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: </div>
-
-#+REVEAL_HTML: </div>
-
-** Problem Setting
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: data-auto-animate
-:END:
-
-#+begin_notes
-Today, I am going to present you a new study on the topic of human-machine colaboration.
-#+end_notes
-
-#+REVEAL_HTML: <div style="display: flex; flex-direction: column">
-#+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
-#+REVEAL_HTML: <div style="width:80%">
-*Machine Problem-Solving*
-  - Increasingly taking over human domains
-  - AI getting more complex \to black boxes \to lack of trust
-  - Trust issues not new (Classical AI in 1950s) 
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div style="width:20%">
-{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig \(1914-2005\)\, father of linear programming", "22rh")}}}
+{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig & Linear Programming (1947)", "40rh")}}}
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
 #+REVEAL_HTML: <div style="display: flex; flex-direction: row;">
 #+REVEAL_HTML: <div style="width:80%">
+#+ATTR_REVEAL: :frag (t)
 *Evaluating Human Interpretability*
 #+ATTR_REVEAL: :frag (t)
   - Human-in-the-loop approach to evaluate interpretability
@@ -392,7 +333,8 @@ Today, I am going to present you a new study on the topic of human-machine colab
   - Critical for trust and collaboration with machines
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="width:20%">
-{{{revealimg("./svg/human_loop.svg.meta", "Human-in-the-loop: Enhanced algorithms through continuous human input.", "22rh")}}}
+#+ATTR_REVEAL: :frag (t)
+{{{revealimg("./svg/human_loop.svg.meta", "Human-in-the-loop.", "40rh")}}}
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
@@ -401,11 +343,11 @@ Today, I am going to present you a new study on the topic of human-machine colab
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 
-{{{revealimg("./svg/knapsack.svg.meta","Knapsack Problem","22rh")}}}
+{{{revealimg("./svg/knapsack.svg.meta","Knapsack Problem","30rh")}}}
 
-{{{revealimg("./svg/minimum_spanning_tree.svg.meta","Minimum Spanning Tree","22rh")}}}
+{{{revealimg("./svg/minimum_spanning_tree.svg.meta","Minimum Spanning Tree","30rh")}}}
 
-{{{revealimg("./svg/traveling_salesman.svg.meta","Traveling Salesman Problem","22rh")}}}
+{{{revealimg("./svg/traveling_salesman.svg.meta","Traveling Salesman Problem","30rh")}}}
 
 
 #+REVEAL_HTML: </div>
@@ -695,7 +637,10 @@ Q2: *How* does the model arrive at its judgments and how do they differ from *hu
 
 # prediction
 
-** First Results: Predictions
+
+** First Results
+
+** Predictions
 
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
@@ -718,7 +663,7 @@ file:./svg/cnn_results.svg
 
 ** Attributions
 
-** First Results: Attributions
+** Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -726,7 +671,7 @@ Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGrad
 
   file:./img/Sp_283_gradcam.png
 
-** First Results: Attributions
+** Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -734,7 +679,7 @@ Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGrad
 
   file:./img/Sp_111_gradcam.png
 
-** First Results: Attributions
+** Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -742,7 +687,7 @@ Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGrad
 
   file:./img/Sp_285_gradcam.png
 
-** First Results: Attributions
+** Attributions
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -758,7 +703,7 @@ Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGrad
 
 # e.g., rating how pleasing people find complex images of an urban landscape. or artworks. and then trying to extract the features in these images that led to people's judgments. 
 
-** First Results: Feature Visualization
+** Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -774,7 +719,7 @@ file:./svg/cnn_layers_early.svg
 #+CAPTION: Activation patterns in 9 example neurons for layer 1 (left), layer 2.1 (middle) and layer 2.2 (right).
   file:./img/features_early.png
 
-** First Results: Feature Visualization
+** Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -791,7 +736,7 @@ file:./svg/cnn_layers_intermediate.svg
   file:./img/features_intermediate.png
 #+REVEAL_HTML: </div>
 
-** First Results: Feature Visualization
+** Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -808,7 +753,7 @@ file:./svg/cnn_layers_last.svg
   file:./img/features_last.png
 #+REVEAL_HTML: </div>
 
-** First Results: Feature Visualization
+** Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
@@ -822,7 +767,6 @@ file:./svg/cnn_layers_final.svg
 #+ATTR_HTML: :width 100%
 #+CAPTION: Three example images that maximize the final output "Fear".
   file:./img/features_final.png
-
 
 ** Why ... :noexport:
 
@@ -882,9 +826,9 @@ file:./img/aether_illustration.png
 
 #+ATTR_REVEAL: :frag (t)
   - *Reinforcement Learning* (RL; [cite//bare:@suttonReinforcementLearningIntroduction2018]) offers a data-driven approach
-  - RL: Agent learns optimal actions through trial and error
-  - Therapist: Deep RL Algorithms like Deep Q Networks (DQN; [cite//bare:@mnihPlayingAtariDeep2013])
-  - Simulated Patient: e.g., [cite/text:@rescorla1972theory] $F_{\text{expected}} \leftarrow F_{\text{expected}} + \alpha (F_{\text{actual}} - F_{\text{expected}})$
+  - Agent learns optimal actions through *trial and error*
+  - *Therapist*: Deep RL Algorithms like Deep Q Networks (DQN; [cite//bare:@mnihPlayingAtariDeep2013])
+  - *Simulated Patient*: e.g., [cite/text:@rescorla1972theory] $F_{\text{expected}} \leftarrow F_{\text{expected}} + \alpha (F_{\text{actual}} - F_{\text{expected}})$
 
 # \[
 # V_{\text{new}} = V_{\text{old}} + \alpha (\lambda - V_{\text{old}})
@@ -983,8 +927,8 @@ file:./img/p3_other.png
 #+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;"><b>Enhancing Human-Computer Interaction (HCI)</b></div>
 #+ATTR_REVEAL: :frag (t)
 1. First results show us how we can enhance *trust* by finding factors that matter for interpretability
-2. AI models can *learn fear-potential in images*, but the "how" remains open
-3. Reinforcement learning is a promising approach for finding good interaction protocols in *computerized exposure therapy*
+2. AI models can learn *emotional potential in images*, but the "how" remains open
+3. Reinforcement learning is a promising approach for finding good *interaction protocols* in computerized exposure therapy
 * Source code :noexport:
 #+begin_src python -n :results output
 import numpy as np
@@ -1007,6 +951,7 @@ print(x)
    :PROPERTIES:
    :CUSTOM_ID: bibliography
    :END:
+
 
 # adjust font-size and line-width and in css/custom.css if you cannot put all references on 1 slide. a better solution that allows splitting the bibliography across slides still needs to be found. 
 
