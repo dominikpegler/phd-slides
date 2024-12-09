@@ -339,7 +339,7 @@ file:./img/p1_update.png
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
-** Combinatorial Design Problems
+** Combinatorial Design Problems :noexport:
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;height: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:row;justify-content:space-between;height:40%;">
 
@@ -361,7 +361,6 @@ file:./img/p1_update.png
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 ** Bin-Packing Problem
-
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:70%;">
 - Abstract representation of real-world scenarios (e.g., scheduling)
@@ -696,13 +695,6 @@ Gradient-weighted Class Activation Mapping (Grad-CAM; [cite//bare:@selvarajuGrad
   file:./img/Sp_073_gradcam.png
 
 ** Feature Visualization
-
-# show this as a second method to get an idea how these models come to their judgments. and mention that this is not at the present moment planned to be part of the publicatoin, but could potentially lead to a follow-up paper. I found it interesting and wanted to show it anyway.
-
-# at the end of this section. this approach could work for many things in psychology where we do not exactly know how the mind works: train a neural network to achieve the same behavior (such as a fear response) and once it does it well enough, work backwards and look into the model and try to explain that behavior.
-
-# e.g., rating how pleasing people find complex images of an urban landscape. or artworks. and then trying to extract the features in these images that led to people's judgments. 
-
 ** Feature Visualization
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
