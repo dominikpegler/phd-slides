@@ -319,7 +319,7 @@ file:./img/p1_update.png
   - Trust issues not new (Classical AI in 1950s) 
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="width:20%">
-{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig & Linear Programming (1947)", "40rh")}}}
+{{{revealimg("./img/dantzig_c.jpg.meta", "George Dantzig & Linear Programming (1947)", "38rh")}}}
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
@@ -334,7 +334,7 @@ file:./img/p1_update.png
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div style="width:20%">
 #+ATTR_REVEAL: :frag (t)
-{{{revealimg("./svg/human_loop.svg.meta", "Human-in-the-loop.", "40rh")}}}
+{{{revealimg("./svg/human_loop.svg.meta", "Human-in-the-loop.", "38rh")}}}
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
