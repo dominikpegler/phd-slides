@@ -497,7 +497,7 @@ file:./img/eye_example.png
    
 - *Publication*: Early 2025
 
-- *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Cybernetics, IEEE Transactions on Systems, Man, and Cybernetics, Computers in Human Behavior/
+- *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Cybernetics, IEEE Transactions on Systems, Man, and Cybernetics, Computers in Human Behavior, Behaviour and Information Technology/
 
 ** Possible future directions :noexport:
 #+ATTR_HTML: :width 100% :margin-top 0px :margin-bottom 0px
@@ -771,7 +771,7 @@ file:./svg/cnn_layers_final.svg
   - Investigate overlap with human judgments
   - Write draft
 - *Publication*: 2025
-- *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior/
+- *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior, Behaviour and Information Technology/
 
 ** Takeaways
 
@@ -875,7 +875,7 @@ Empirical validation with real subjects
    
 - *Publication*: 2026
 
-- *Target journals*: /Foundations and Trends in Machine Learning, International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior/
+- *Target journals*: /Foundations and Trends in Machine Learning, International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior, Behaviour and Information Technology/
   
 ** Takeaways :noexport:
     - Aim to advance computer-aided exposure therapy
