@@ -836,7 +836,7 @@ Q1: How can RL *model fear extinction* and optimize therapy protocols?
 Q2: Can RL improve *consistency and objectivity* in exposure therapy?
 #+reveal_html:</div>
     
-** Planned Methodology
+** Planned Methodology :noexport:
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
