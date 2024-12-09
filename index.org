@@ -499,12 +499,34 @@ file:./img/eye_example.png
 
 - *Target journals*: /International Journal of Human-Computer Studies, Computers in Human Behavior, Behaviour and Information Technology/
 
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div style="font-size:0.8rem;margin-top:2rem;margin-bottom:1rem;">This project is funded by <a href="https://www.ffg.at">www.ffg.at</a></div>
+#+ATTR_HTML: :height 40px
+file:./svg/ffg_logo_en.svg
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div>
+#+REVEAL_HTML: <div style="font-size:0.8rem;margin-top:2rem;margin-bottom:1rem">and carried out in association with</div>
+#+REVEAL_HTML: <div style="display:flex;justify-content:center;align-items:center;">
+
+#+ATTR_HTML: :width 130px
+file:./svg/UniWien_CMYK_A4.svg
+
+#+ATTR_HTML: :height 50vpx
+file:./svg/tu_logo.svg
+
+#+ATTR_HTML: :width 120px
+file:./img/tttech_logo.png
+
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: </div>
+
 ** Possible future directions :noexport:
 #+ATTR_HTML: :width 100% :margin-top 0px :margin-bottom 0px
 file:./svg/next_steps.svg
 
 
-** Takeaways
+** Takeaways :noexport:
 - Humans seem to use *solving heuristics during evaluation*​
 - Adequate *visual representation* is requirement​
 - All factors may play a bigger role in *larger problems*​
@@ -773,7 +795,7 @@ file:./svg/cnn_layers_final.svg
 - *Publication*: 2025
 - *Target journals*: /International Journal of Human-Computer Studies, IEEE Transactions on Affective Computing, Computers in Human Behavior, Behaviour and Information Technology/
 
-** Takeaways
+** Takeaways :noexport:
 
 - Computer vision models can learn latent construct like fear *(Q1)*
 - Model’s judgments often, but not always, understandable (fear-eliciting stimulus not highlighted) *(Q2)*
