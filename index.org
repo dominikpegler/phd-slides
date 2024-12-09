@@ -437,7 +437,7 @@ file:./img/p1_update.png
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:60%;">
 
 #+ATTR_HTML: :height 100% :margin-top 0px :margin-bottom 0px
-#+caption:Fixed Effects Estimates of Predictor Variables on Choice in Multilevel Analysis. The plot displays the estimated fixed effects (with 95% confidence intervals) for the three predictors. The effects are adjusted for random effects at the group level, highlighting the marginal impact of each predictor on the outcome variable 'choice'.
+#+caption:Fixed Effects Estimates of Predictor Variables (x-axis) on Choice (y-axis) in Multilevel Analysis. The plot displays the estimated fixed effects (with 95% confidence intervals) for the three predictors. The effects are adjusted for random effects at the group level.
  file:./img/results_choice_fixed_effects.png
 #+REVEAL_HTML: </div>
 
