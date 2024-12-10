@@ -83,8 +83,8 @@ on how to create reusable css classes
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-#+reveal_html: <div style="float:left;width:75%;">
-For effective and natural human-computer interactions, computers must not only *_recognize_* but also respond to *human emotions* (Affective Computing;  [cite//bare:@picardAffectiveComputing1997])
+#+reveal_html: <div style="float:left;width:75%;text-align:left;">
+For effective and natural human-computer interactions, computers must  *_recognize_* and respond to *human emotions* (Affective Computing;  [cite//bare:@picardAffectiveComputing1997])
 
 #+ATTR_REVEAL: :frag (t)
 - *Examples*: Interfaces with emotional content, e.g., images on websites, mobile apps
@@ -100,8 +100,8 @@ For effective and natural human-computer interactions, computers must not only *
 :PROPERTIES:
 :REVEAL_EXTRA_ATTR: data-auto-animate
 :END:
-#+reveal_html: <div style="float:left;width:75%;">
-For effective and natural human-computer interactions, computers must not only recognize but also *_respond_* to *human emotions* (Affective Computing;  [cite//bare:@picardAffectiveComputing1997])
+#+reveal_html: <div style="float:left;width:75%;text-align:left;">
+For effective and natural human-computer interactions, computers must  recognize and *_respond_* to *human emotions* (Affective Computing;  [cite//bare:@picardAffectiveComputing1997])
 
 #+ATTR_REVEAL: :frag (t)
 - *Examples*: Recommender systems, care robot, counseling chatbot
@@ -774,7 +774,7 @@ file:./svg/cnn_layers_final.svg
 *Final Output Node*
 
 #+ATTR_HTML: :width 100%
-#+CAPTION: An example image that maximize the final output "Fear".
+#+CAPTION: An example image that maximizes the final output "Fear".
   file:./img/features_final.png
 
 ** Why ... :noexport:
