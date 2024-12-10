@@ -758,7 +758,7 @@ file:./svg/cnn_layers_last.svg
 
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row">
 #+ATTR_HTML: :width 100%
-#+CAPTION: Activation patterns in example neurons for layer 4.1 (left), layer 4.2 (middle) and layer 4.3 (right).
+#+CAPTION: Activation patterns in example neurons for layer 5.1 (left), layer 5.2 (middle) and layer 5.3 (right).
   file:./img/features_last.png
 #+REVEAL_HTML: </div>
 
@@ -774,7 +774,7 @@ file:./svg/cnn_layers_final.svg
 *Final Output Node*
 
 #+ATTR_HTML: :width 100%
-#+CAPTION: Three example images that maximize the final output "Fear".
+#+CAPTION: An example image that maximize the final output "Fear".
   file:./img/features_final.png
 
 ** Why ... :noexport:
@@ -934,7 +934,7 @@ file:./img/p3_other.png
 
 #+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;"><b>Enhancing Human-Computer Interaction (HCI)</b></div>
 #+ATTR_REVEAL: :frag (t)
-1. First results show us how we can enhance *trust* by finding factors that matter for interpretability
+1. First results show us how we can enhance *trust* by finding factors that matter for interpretability (e.g., heuristics)
 2. AI models can learn *emotional potential in images*, but the "how" remains open
 3. Reinforcement learning is a promising approach for finding good *interaction protocols* in computerized exposure therapy
 * Source code :noexport:
