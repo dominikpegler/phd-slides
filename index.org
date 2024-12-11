@@ -596,7 +596,7 @@ Q1: Can a machine learning model built for object recognition learn a *latent co
 #+ATTR_REVEAL: :frag (t)
 Q1-1: How much *data* do we need?
 #+ATTR_REVEAL: :frag (t)
-Q1-2: What *erros* will it make?
+Q1-2: What *errors* will it make?
 #+reveal_html:</div>
 #+reveal_html:</div>
 
