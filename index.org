@@ -592,12 +592,12 @@ file:./img/example_stimuli_rated.png
 #+reveal_html:<div style="border-radius:12px;background-color:lightblue;">
 #+ATTR_REVEAL: :frag (t)
 Q1: Can a machine learning model built for object recognition learn a *latent construct* such as fear?
-#+reveal_html:<div style="font-size:1.9rem;">
-#+ATTR_REVEAL: :frag (t)
-Q1-1: How much *data* do we need?
-#+ATTR_REVEAL: :frag (t)
-Q1-2: What *errors* will it make?
-#+reveal_html:</div>
+# #+reveal_html:<div style="font-size:1.9rem;">
+# #+ATTR_REVEAL: :frag (t)
+# Q1-1: How much *data* do we need?
+# #+ATTR_REVEAL: :frag (t)
+# Q1-2: What *errors* will it make?
+# #+reveal_html:</div>
 #+reveal_html:</div>
 
 #+reveal_html:<div style="border-radius:12px;background-color:lightblue;margin-top:3rem">
@@ -790,7 +790,7 @@ file:./svg/cnn_layers_final.svg
 - *Completed*: Concept, Analysis Pipeline
 - *Pending*:
   - Explore more architectures
-  - Error & learning curve analysis
+  # - Error & learning curve analysis
   - Investigate overlap with human judgments
   - Write draft
 - *Publication*: 2025
