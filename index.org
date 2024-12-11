@@ -422,7 +422,7 @@ file:./img/p1_update.png
 :END:
 
 #+REVEAL_HTML: <img src="svg/experiment_1.svg" alt="experiment overview" style="max-height:666px"/>
-/N/ = 73 participants (pilot)
+/N/ = 73 participants (exploratory sample)
 
 ** Online-Experiment
 :PROPERTIES:
@@ -430,7 +430,7 @@ file:./img/p1_update.png
 :END:
 
 #+REVEAL_HTML: <img src="svg/experiment_2.svg" alt="experiment detail" style="max-height:666px"/>
-/N/ = 73 participants (pilot)
+/N/ = 73 participants (exploratory sample)
 
 ** Pilot Results
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
