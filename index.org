@@ -432,7 +432,7 @@ file:./img/p1_update.png
 #+REVEAL_HTML: <img src="svg/experiment_2.svg" alt="experiment detail" style="max-height:666px"/>
 /N/ = 73 participants (exploratory sample)
 
-** Pilot Results
+** Results
 #+REVEAL_HTML: <div style="display:flex;flex-direction:row;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;width:60%;">
 
@@ -445,6 +445,7 @@ file:./img/p1_update.png
 - *All three* predictors relevant for people's choices
 - *Order* and *Heuristic* most influental
 - *Explained variance*: /R²/\equal0.17
+- *Exploratory sample* (73 participants \times 25 trials = 1825 trials)
 #+REVEAL_HTML: <div style="font-size:1.5rem;">
 # Other findings:
 #  - Considerable participant variability in all predictors
@@ -454,9 +455,9 @@ file:./img/p1_update.png
 #+REVEAL_HTML: </div>
 
 
-** Pilot Results Machine Learning Analysis :noexport:
+** Results Machine Learning Analysis :noexport:
 
-** Pilot Results Eye-tracking :noexport:
+** Results Eye-tracking :noexport:
 #+REVEAL_HTML: <div style="display:flex;flex-direction:column;width: 100%">
 #+REVEAL_HTML: <div style="display:flex; flex-direction:column;justify-content:center;">
 - *Gaze dwell times* predictive of choice (/r/ \equal 0.20)
