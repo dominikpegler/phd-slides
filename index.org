@@ -72,7 +72,7 @@ on how to create reusable css classes
 - *Examples*: Cobots (collaborative robots) in engineering and surgery, autopilot systems, self-driving cars
 - *Project Focus*
   - *Interaction Setting*: Problem-solving game
-  - *Improvement*: Eknhance interpretability
+  - *Improvement*: Enhance interpretability
 #+reveal_html: </div>
 
 #+reveal_html: <div style="float:right;width:35%;">
