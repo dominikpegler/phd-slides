@@ -386,7 +386,7 @@ file:./img/p1_update.png
 
 ** H1: Heuristic
 - Humans use (greedy) heuristics \to greedy solution
-- Similarity to greedy solution is measured by graph edit distance[cite/p:@sanfeliuDistanceMeasureAttributed1983] 
+- Similarity to greedy solution is measured by graph edit distance [cite/p:@sanfeliuDistanceMeasureAttributed1983] 
   
 #+ATTR_HTML: :height 480px :margin-top 0px :margin-bottom 0px
  file:./svg/heuristic.svg
