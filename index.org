@@ -787,7 +787,7 @@ file:./svg/cnn_layers_final.svg
 ** Current Status
 - *Completed*: Concept, Analysis Pipeline
 - *Pending*:
-  - Explore more architectures
+  - Explore more models (larger ones, vision transformers, ...)
   # - Error & learning curve analysis
   - Investigate overlap with human judgments
   - Write draft
