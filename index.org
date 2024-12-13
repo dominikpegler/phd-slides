@@ -49,7 +49,7 @@ on how to create reusable css classes
 
 - Reshapes communication, work, and leisure
 - Human-Computer Interaction (HCI) ensures accessibility and efficiency
-- Challenges (e.g., Trust and Transparency, Emotional Intelligence)
+- Challenges (e.g., Transparency & Interpretability, Emotional Intelligence)
 
 # Building reliable and understandable systems.
 
@@ -72,7 +72,7 @@ on how to create reusable css classes
 - *Examples*: Cobots (collaborative robots) in engineering and surgery, autopilot systems, self-driving cars
 - *Project Focus*
   - *Interaction Setting*: Problem-solving game
-  - *Improvement*: Enhance trust by focusing on interpretability
+  - *Improvement*: Eknhance interpretability
 #+reveal_html: </div>
 
 #+reveal_html: <div style="float:right;width:35%;">
@@ -143,7 +143,7 @@ file:./img/p1_update.png
 #+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
 
 #+reveal_html:<div style="font-weight:bold;">Joint Human-Machine Problem Solving</div>
-#+reveal_html:<div style="font-size:1.6rem;text-align:left">Addressing trust through human interpretability</div>
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Addressing  human interpretability</div>
 
 # end of item 1-1
 #+reveal_html:</div>
@@ -239,7 +239,7 @@ file:./img/p1_update.png
 #+reveal_html:<div style="display:flex; flex-direction:column;align-items:flex-start;margin-left:2rem;width:85%;">
 
 #+reveal_html:<div style="font-weight:bold;">Joint Human-Machine Problem Solving</div>
-#+reveal_html:<div style="font-size:1.6rem;text-align:left">Addressing trust through human interpretability</div>
+#+reveal_html:<div style="font-size:1.6rem;text-align:left">Addressing  human interpretability</div>
 
 # end of item 1-1
 #+reveal_html:</div>
@@ -674,8 +674,6 @@ file:./svg/cnn_results.svg
 #+REVEAL_HTML: </div>
 #+REVEAL_HTML: </div>
 
-
-
 # grad cam
 
 ** Attributions
@@ -935,7 +933,7 @@ file:./img/p3_other.png
 
 #+reveal_html:<div style="background:lightblue;border-radius:20px;color:#2e2e2e;padding:4px;"><b>Enhancing Human-Computer Interaction (HCI)</b></div>
 #+ATTR_REVEAL: :frag (t)
-1. First results show us how we can enhance *trust* by finding factors that matter for interpretability (e.g., heuristics)
+1. First results show us potential factors that matter for *interpretability* (e.g., heuristics)
 2. AI models can learn *emotional potential in images*, but the "how" remains open
 3. Reinforcement learning is a promising approach for finding good *interaction protocols* in computerized exposure therapy
 * Source code :noexport:
